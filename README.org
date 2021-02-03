@@ -1,0 +1,4 @@
+* Welcome
+This is my personal site
+
+Built solely with HTML/CSS and Emacs Org-Mode
