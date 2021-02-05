@@ -2,3 +2,9 @@
 This is my personal site
 
 Built solely with HTML/CSS and Emacs Org-Mode
+
+Check out the single source file [[https://www.github.com/jonathanmfung/jonathanmfung.github.io/main.org][here]]
+
+[[https://jonathanmfung.github.io]]
+
+INSERT SNIPPETS AND TALK I GOT THEM FROM

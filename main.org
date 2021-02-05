@@ -1,0 +1,903 @@
+#+TITLE: Main
+#+DATE:
+#+LaTeX_CLASS: notes
+#+OPTIONS: toc:nil
+* Files
+** file:./index.html
+#+begin_src html :tangle index.html :noweb no-export
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <<HEAD>>
+  <body>
+    <div class="main-container">
+      <<sidebar>>
+      <<home>>
+    </div>
+    <<decor>>
+  </body>
+</html>
+#+end_src
+** file:./pages/about.html
+#+begin_src html :tangle ./pages/about.html :noweb no-export
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <<HEAD>>
+  <body>
+    <div class="main-container">
+      <<sidebar>>
+      <<about>>
+    </div>
+    <<decor>>
+  </body>
+</html>
+#+end_src
+** file:./pages/blog.html
+#+begin_src html :tangle ./pages/blog.html :noweb no-export
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <<HEAD>>
+  <body>
+    <div class="main-container">
+      <<sidebar>>
+      <<blog>>
+    </div>
+    <<decor>>
+  </body>
+</html>
+#+end_src
+** file:./pages/essays.html
+#+begin_src html :tangle ./pages/essays.html :noweb no-export
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <<HEAD>>
+  <body>
+    <div class="main-container">
+      <<sidebar>>
+      <<essays>>
+    </div>
+    <<decor>>
+  </body>
+</html>
+#+end_src
+** file:./pages/contact.html
+#+begin_src html :tangle ./pages/contact.html :noweb no-export
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <<HEAD>>
+  <body>
+    <div class="main-container">
+      <<sidebar>>
+      <<contact>>
+    </div>
+    <<decor>>
+  </body>
+</html>
+#+end_src
+** file:./pages/resume.html
+#+begin_src html :tangle ./pages/resume.html :noweb no-export
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <<HEAD>>
+  <body>
+    <div class="main-container">
+      <<sidebar>>
+      <<resume>>
+    </div>
+    <<decor>>
+  </body>
+</html>
+#+end_src
+** TODO mkdir for essays (contingent on naming essays/writings/papers)
+* Components
+** HEAD+=
+#+begin_src html  :noweb no-export :noweb-ref HEAD
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    
+    <!-- Need to toggle this when deploying -->
+    <base href="/home/jonat/personal-site/">
+    <!-- <base href="https://jonathanmfung.github.io/"> -->
+
+    <title>Jonathan Fung</title>
+    <link href="./styles/main.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="Assets/favicon1.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Jonathan Fung's Website">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <script src="https://kit.fontawesome.com/21b56814b7.js" crossorigin="anonymous"></script>
+  </head>
+#+end_src
+*** TODO Add in google analytics tag
+** Sidebar + Footer + Decor
+*** TODO Add copyright to bottom of sidebar, perhaps absolute withe bottom left decor
+*** sidebar+=
+#+begin_src web  :noweb no-export :noweb-ref sidebar
+<div class="sidebar-container">
+    <div class="sidebar-name">
+        <a href="./index.html">Jonathan Fung</a>
+    </div>
+    <div class="sidebar-routes">
+        <ul class="sidebar-lists">
+            <li>
+                <a class="pages" href="./pages/about.html">About</a>
+            </li>
+            <li>
+                <a class="pages" href="./pages/blog.html">Blog</a>
+            </li>
+            <li>
+                <a class="pages" href="./pages/essays.html">Essays</a>
+            </li>
+            <br>
+            <li>
+                <a class="pages" href="./pages/contact.html">Contact</a>
+            </li>
+            <li>
+                <a class="pages" href="./pages/resume.html">Résumé</a>
+            </li>
+        </ul>
+    </div>
+    <!--
+    <div class="sidebar-links">
+        <ul class="sidebar-lists">
+            <li><a href="mailto:jonathanfung2000@gmail.com">Email</a></li>
+            <li><a href="https://www.linkedin.com/in/jonathanmfung">LinkedIn</a></li>
+            <li><a href="https://github.com/jonathanmfung/">GitHub</a></li>
+            <li><a href="/JonathanFung_Resume.pdf">Resume</a></li>
+        </ul>
+    </div>
+    -->
+    <div class="sidebar-links-mobile">
+        <ul class="sidebar-lists">
+            <li><a href="mailto:jonathanfung2000@gmail.com"><i class="fas fa-envelope"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/jonathanmfung"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/jonathanmfung/"><i class="fab fa-github-square"></i></a></li>
+            <li><a href="/JonathanFung_Resume.pdf"><i class="fas fa-file-pdf"></i></a></li>
+        </ul>
+    </div>
+    <div class="sidebar-line"></div>
+</div>
+#+end_src
+*** footer+=
+#+begin_src html  :noweb no-export :noweb-ref footer
+<footer></footer>
+#+end_src
+*** decor+=
+#+begin_src web :noweb no-export :noweb-ref decor
+<!-- think these are the two breadcrumb things on the right 
+<div>
+    <div class="bracket" style="top: 30%; right: 50px; transform: rotate(0deg) scale(0.75); border-color:var(--main-gray); "></div>
+    <div class="bracket" style="top: 40%; right: 50px; transform: rotate(-90deg) scale(0.75); border-color:var(--main-gray); "></div>
+</div>
+-->
+
+<div class="decor">
+    <div class="bracket" style="top: 25px; left: 25px; transform: rotate(0deg);"></div>
+    <div class="bracket" style="bottom: 25px; left: 25px; transform: rotate(-90deg);"></div>
+    <div class="bracket" style="top: 25px; right: 25px; transform: rotate(90deg); border-color:var(--black);"></div>
+    <div class="bracket" style="bottom: 25px; right: 25px; transform: rotate(180deg);border-color:var(--black);"></div>
+</div>
+#+end_src
+** Mains
+*** home+=
+#+begin_src web :noweb no-export :noweb-ref home
+<div class="content-container">
+    <button class="content-title">
+        Hello!
+    </button>
+    <p style="font-weight: 600;">
+        I am a Materials Science Engineering Student at UC Irvine, graduating in December 2021.
+    </p>
+    <p style="font-weight: 600;">
+        I strive to understand fundamentals of the world. From Materials Science to Information Theory to Experience Design, I aim to explore the root cause of any phenomenon.
+    </p>
+    <hr class="content-divider" />
+    <p>
+        I spent the summer of 2019 at <a href="https://meyersound.com">Meyer Sound</a> in Berkeley, California as an Operations Intern. I learned a great deal about how the compliance industry runs. I managed compliance documents from multiple international organizations and submitted direct changes to our internal Product Lifecycle Management System.
+    </p>
+    <p>
+        At UCI, I am a Project Teams Coordinator for <a href="https://designatuci.com/"> Design at UCI</a>. I mainly manage our Project Teams program, which helps students develop UI/UX and related design skills in a practical manner. I have also helped plan and produce our inaugural Designathon.
+    </p>
+    <p>
+        Some of my interests include:
+    </p>
+    <ul>
+        <li>-  Any form of Design</li>
+        <li>-  Hiking</li>
+        <li>-  Linux</li>
+        <li>-  Emacs + Org Mode</li>
+    </ul>
+    <div class="featured">
+        Featured Links:
+        <br>
+        <br>
+        <ul>
+            <li>
+                <span>Project</span> -
+                <span><a href="https://google.com">Designathon at UCI 2020</a></span>
+            </li>
+            <li>
+                <span>Blog</span> -
+                <span><a href="https://google.com">Linux Setup + Workflow</a></span>
+            </li>
+            <li>
+                <span>Essay</span> -
+                <span><a href="https://google.com">Quantum Cognitive Dissonance</a></span>
+            </li>
+        </ul>
+    </div>
+</div>
+#+end_src
+*** about+=
+#+begin_src web :noweb no-export :noweb-ref about
+<div class="content-container">
+    <button class="content-title">
+        About
+    </button>
+    <p>
+        Based in California, currently looking for a job in almost anything. Willing to relocate.
+        <a href="./pages/contact.html">Contact me</a> to start a conversation.
+    </p>
+    <p>
+        Blogs are my form of internal and external communication.
+        Essays are my form of academic research.
+    </p>
+    <p>
+        Site built by exploring literate programming techniques.
+        Check out the single source file
+        <a href="https://www.github.com/jonathanmfung/jonathanmfung.github.io/main.org">here</a>.
+        Almost every single aspect of this site was intentionally designed. Read more HERE (insert blog link).
+    </p>
+</div>
+#+end_src
+*** blog+=
+#+begin_src web :noweb no-export :noweb-ref blog
+<div class="content-container">
+    <button class="content-title">
+        Blog
+    </button>
+    <p >
+Here is my blog. A stream of consciousness. Filled with random thoughts I have jotted down over my recent life. Unfilled with all the thoughts too trivial or extreme. Associated dates are of birth, not completion. I believe these reflect who I am as a person, covering many of my major interests. I share these to you, the reader, in hope that you will read them.
+    </p>
+    <p>
+        Attributes are out of 10 points each.
+    </p>
+    <ul>
+        <li>-  Abstract: How vague the concepts of the post are</li>
+        <li>-  Perspective: How much my personal views and beliefs guide the post</li>
+        <li>-  Breadth: How directed the post is</li>
+        <li>-  Intensity: Sum of the three Attributes</li>
+    </ul>
+    <div class="card-container">
+        <div class="card"">
+            <h1>
+                <a href="./index.html">
+                    Designathon Case Study
+                </a>
+            </h1>
+            <ul>
+                <li>Abstract - 2</li>
+                <li>Persepective - 8</li>
+                <li>Breadth - 5</li>
+            </ul>
+            <div class="score">
+                <p>Intensity</p>
+                <h2>15</h2>
+            </div>
+        </div>
+        <div class="card"">
+            <h1>
+                <a href="./index.html">
+                    Lorem Ipsum Dolar
+                </a>
+            </h1>
+            <ul>
+                <li>Abstract - 7</li>
+                <li>Persepective - 3</li>
+                <li>Breadth - 5</li>
+            </ul>
+            <div class="score">
+                <p>Intensity</p>
+                <h2>15</h2>
+            </div>
+        </div>
+        <div class="card"">
+            <h1>
+                <a href="./index.html">
+                    Lorem Ipsum Dolar
+                </a>
+            </h1>
+            <ul>
+                <li>Abstract - 7</li>
+                <li>Persepective - 3</li>
+                <li>Breadth - 5</li>
+            </ul>
+            <div class="score">
+                <p>Intensity</p>
+                <h2>15</h2>
+            </div>
+        </div>
+        <div class="card"">
+            <h1>
+                <a href="./index.html">
+                    Lorem Ipsum Dolar
+                </a>
+            </h1>
+            <ul>
+                <li>Abstract - 7</li>
+                <li>Persepective - 3</li>
+                <li>Breadth - 5</li>
+            </ul>
+            <div class="score">
+                <p>Intensity</p>
+                <h2>15</h2>
+            </div>
+        </div>
+        <div class="card"">
+            <h1>
+                <a href="./index.html">
+                    Lorem Ipsum Dolar
+                </a>
+            </h1>
+            <ul>
+                <li>Abstract - 7</li>
+                <li>Persepective - 3</li>
+                <li>Breadth - 5</li>
+            </ul>
+            <div class="score">
+                <p>Intensity</p>
+                <h2>15</h2>
+            </div>
+        </div>
+        <div class="card"">
+            <h1>
+                <a href="./index.html">
+                    Lorem Ipsum Dolar
+                </a>
+            </h1>
+            <ul>
+                <li>Abstract - 7</li>
+                <li>Persepective - 3</li>
+                <li>Breadth - 5</li>
+            </ul>
+            <div class="score">
+                <p>Intensity</p>
+                <h2>15</h2>
+            </div>
+        </div>
+        <div class="card"">
+            <h1>
+                <a href="./index.html">
+                    Lorem Ipsum Dolar
+                </a>
+            </h1>
+            <ul>
+                <li>Abstract - 7</li>
+                <li>Persepective - 3</li>
+                <li>Breadth - 5</li>
+            </ul>
+            <div class="score">
+                <p>Intensity</p>
+                <h2>15</h2>
+            </div>
+        </div>
+        <div class="card"">
+            <h1>
+                <a href="./index.html">
+                    Lorem Ipsum Dolar
+                </a>
+            </h1>
+            <ul>
+                <li>Abstract - 7</li>
+                <li>Persepective - 3</li>
+                <li>Breadth - 5</li>
+            </ul>
+            <div class="score">
+                <p>Intensity</p>
+                <h2>15</h2>
+            </div>
+        </div>
+        <div class="card"">
+            <h1>
+                <a href="./index.html">
+                    Lorem Ipsum Dolar
+                </a>
+            </h1>
+            <ul>
+                <li>Abstract - 7</li>
+                <li>Persepective - 3</li>
+                <li>Breadth - 5</li>
+            </ul>
+            <div class="score">
+                <p>Intensity</p>
+                <h2>15</h2>
+            </div>
+        </div>
+    </div>
+</div>
+#+end_src
+*** essays+=
+#+begin_src web :noweb no-export :noweb-ref essays
+<div class="content-container">
+    <button class="content-title">
+        Essays
+    </button>
+    <p style="font-weight: 600;">
+        To Be Explored.
+    </p>
+</div>
+#+end_src
+*** contact+=
+#+begin_src web :noweb no-export :noweb-ref contact
+<div class="content-container">
+    <button class="content-title">
+        Contact
+    </button>
+    <p style="font-weight: 600;">
+        Email me at: jonathanfung2000 AT gmail DOT com
+    </p>
+    <p>
+        <a href="https://www.linkedin.com/in/jonathanmfung">LinkedIn</a>
+    </p>
+    <p>
+        <a href="https://github.com/jonathanmfung/">GitHub</a>
+    </p>
+</div>
+#+end_src
+*** resume+=
+#+begin_src web :noweb no-export :noweb-ref resume
+<div class="content-container">
+    <button class="content-title">
+        Résumé
+    </button>
+    <iframe src="assets/JonathanFung_Resume.pdf" style="height:100%;width:100%;border:border: 1px black solid; margin-top: 2rem;" title="Iframe Example">
+        
+    </iframe>
+</div>
+#+end_src
+** Blog Posts
+*** TODO Blog Template
+**** TLDR, Questions
+**** Restricted width content-container, name it content-blog (max-width: 75ch;)
+**** keep vertical bar, but make it black
+**** only a small blue rectangle to navigate back to Blogs page
+*** TODO For Blog page, Add in Cards with Scales, Intensity , Date metadata (don't think date on cards is needed)
+** Essay Posts
+
+* CSS
+** Files
+*** file:./styles/main.css
+#+begin_src css :tangle ./styles/main.css :noweb no-export
+<<universal>>
+<<desktop>>
+<<mobile>>
+#+end_src
+** Universal+=
+#+begin_src css :noweb no-export :noweb-ref universal
+/*Tested mainly on 1920x1080*/
+
+:root {
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+
+    --primary: #00BFE0;
+    --accent: #FF7C00;
+    --white: #ffffff;
+    --black: #000000;
+    /* this is my original */
+    --main-gray: #707070;
+    /* this is 7:1 contrast with white */
+    /* --main-gray: #595959; */
+    --sidebar-link-hover: #cccaca;
+} /*Roboto For Resume*/
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+#+end_src
+** Desktop+=
+#+begin_src css :noweb no-export :noweb-ref desktop
+@media only screen and (min-width: 769px) {
+  /* For Desktop */
+.main-container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 25.5% 74.5%;
+}
+
+.sidebar-container {
+    display: grid;
+    color: var(--white);
+    background-color: var(--primary);
+    height: 100%;
+    grid-template-columns: 13% 73% 15%;
+    /* grid-template-rows: 10% 10% 15% 15% 40% 10%; */
+    grid-template-rows: 10vh 10vh 15vh 15vh 40vh 10vh;
+}
+
+.sidebar-container a{
+    color: var(--white);
+}
+
+.sidebar-container a:hover {
+    color: var(--sidebar-link-hover);
+}
+
+.sidebar-name {
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+    justify-self: end;
+    max-width: 200px;
+    text-align: right;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.sidebar-name a{
+    text-decoration: none;
+}
+
+.sidebar-routes {
+    grid-column: 2 / 2;
+    grid-row: 3 / 3;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.sidebar-links {
+    grid-column: 2 / 2;
+    grid-row: 4 / 4;
+    font-size: 1.2rem;
+}
+
+.sidebar-links-mobile {
+    grid-column: 2 / 2;
+    grid-row: 4 / 4;
+    font-size: 1.2rem;
+    display:none;
+}
+
+.sidebar-lists {
+    list-style: none;
+    text-align: right;
+}
+
+.sidebar-lists a.pages {
+    text-decoration: none;
+}
+
+.sidebar-lists a.pages:hover {
+    color: var(--sidebar-link-hover);
+}
+
+.sidebar-line {
+    grid-column: 3 / 3;
+    grid-row: 2 / 6;
+    background-color: var(--white);
+    width: 0.2rem;
+    justify-self: center;
+}
+
+.content-container {
+    color: var(--black);
+    background-color: var(--white);
+    padding: 10vh 20% 15vh 5%;
+}
+
+.content-title {
+    /*width: 20%;*/
+    font-size:  165%; /*165%;*/
+    color: var(--main-gray);
+    background-color: white;
+    margin-left: 5%;
+    padding: 0.5rem 0.7rem;
+    text-align: center;
+    border: 0.2rem var(--main-gray) solid;
+}
+
+.content-title.test{
+    background-color: var(--white);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.content-container > p {
+    margin: 2% 5%;
+}
+.content-container > ul {
+    list-style-type: none;
+    margin: -2% 2%;
+}
+.content-container p a{
+    color: var(--black);
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 0.2rem;
+}
+.content-container p a:hover{
+    color: var(--black);
+    border-top: 0.2rem solid var(--accent);
+}
+
+.content-container p a:visited {
+    color: var(--main-gray);
+    text-decoration-color: var(--accent);
+}
+
+.content-divider {
+    height: 0.05rem;
+    background-color: var(--black);
+}
+
+.featured {
+    width: 50%;
+    max-width: 350px;
+    margin: 10% 25% 0%;
+    padding: 5%;
+    font-size:  100%;
+    color: var(--black);
+    background-color: white;
+    border: 0.2rem var(--main-gray) solid;
+}
+
+.featured ul {
+    list-style-type: none;
+    margin-top: 0%;
+    /* color: var(--main-gray); */
+    padding: 0;
+}
+
+.featured a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.featured a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+/* https://stackoverflow.com/questions/22763127/aligning-text-on-a-specific-character/22763427 */
+.featured li {
+  display: flex;
+}
+
+.featured li span {
+  flex: 1;
+}
+
+.featured li span:first-of-type {
+  text-align: right;
+  padding-right: 5px;
+}
+
+.featured li span:last-of-type {
+  padding-left: 5px;
+  flex-grow: 2;
+}
+
+.card-container {
+    margin-top: 3rem;
+    display: grid;
+    /* https://css-tricks.com/look-ma-no-media-queries-responsive-layouts-using-css-grid/ */
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    row-gap: 3.5rem;
+    grid-auto-flow: row;
+    
+    justify-items: center;
+    justify-content: space-evenly;
+}
+
+.card {
+    border: 0.2rem var(--main-gray) solid;
+    width: 333px;
+    height: 250px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "title title"
+        "scales score";
+}
+
+.card h1 {
+    font-weight: 600;
+    grid-area: title;
+    justify-self: start;
+    margin: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.card h1 a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+.card h1 a:hover {
+    color: var(--main-gray);
+}
+
+.card ul {
+    grid-area: scales;
+    list-style: none;
+    padding: 0;
+    margin-left: 1.5rem;
+    align-self: center;
+    color: var(--main-gray);
+    font-size: 1.1em;
+}
+
+.card .score {
+    grid-area: score;
+    justify-self: end;
+    margin-right: 1.5rem;
+    align-self: center;
+    text-align: right;
+    color: var(--main-gray);
+}
+
+.card .score p {
+    font-style: italic;
+    margin: 0;
+    margin-bottom: 0.4rem;
+    font-size: 1.1em;
+}
+
+.card .score h2 {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.bracket {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    border-top: solid var(--white) 0.2rem;
+    border-left: solid var(--white) 0.2rem;
+    z-index: 1;
+}}
+#+end_src
+** Mobile+=
+#+begin_src css :noweb no-export :noweb-ref mobile
+@media only screen and (max-width: 768px) {
+  /* For Mobile */
+.main-container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 12% 88%;
+}
+
+.sidebar-container {
+    display: grid;
+    color: var(--white);
+    background-color: var(--primary);
+    height: 100%;
+    grid-template-rows: 13% 73% 15%;
+    grid-template-columns: 10% 20% 25% 15% 20% 10%;
+}
+
+.sidebar-name {
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+    justify-self: end;
+    max-width: 200px;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 700;
+    align-self: center;
+}
+
+.sidebar-routes {
+    grid-column: 3 / 3;
+    grid-row: 2 / 2;
+    font-size: 0.8rem;
+    align-self: center;
+    text-align: center;
+}
+
+.sidebar-links {
+    grid-column: 4 / 4;
+    grid-row: 2 / 2;
+    font-size: 0.8rem;
+    align-self: center;
+    display:none;
+}
+
+.sidebar-links-mobile {
+    grid-column: 4 / 4;
+    grid-row: 2 / 2;
+    font-size: 1.0rem;
+    width: 2.5rem;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+.sidebar-lists {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-links-mobile li {
+    display: inline-block;
+    margin: 0% 4%;
+
+}
+
+.sidebar-lists a {
+    color: var(--white);
+}
+
+.sidebar-lists a:hover {
+    color: var(--sidebar-link-hover);
+}
+
+.sidebar-line {
+    grid-row: 3 / 3;
+    grid-column: 2 / 6;
+    background-color: var(--white);
+    height: 0.1rem;
+    align-self: center;
+}
+
+.content-container {
+    color: var(--black);
+    background-color: var(--white);
+    padding: 5vh 5% 15% 5%
+}
+
+.content-title {
+    /*width: 20%;*/
+    font-size:  165%; /*165%;*/
+    color: var(--main-gray);
+    background-color: white;;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    padding: 0.5rem 0.7rem;
+    text-align: center;
+    border: 0.2rem var(--main-gray) solid;
+}
+
+.content-container > p {
+    margin: 2% 5%;
+    font-size: 0.9rem;
+}
+.content-container > ul {
+    /*margin: 2% 5%;*/
+    font-size: 0.9rem;
+    list-style-type: none;
+    margin: -2% 2%;
+}
+
+.content-container p a{
+    color: var(--accent);
+}
+.content-container p a:visited {
+    color: var(--accent);
+}
+.content-divider {
+    height: 0.05rem;
+    background-color: var(--black);
+}
+
+.featured {
+    display: none;
+}
+
+
+.bracket {
+    display: none;
+}}
+#+end_src
+
