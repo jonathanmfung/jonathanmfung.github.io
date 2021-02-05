@@ -279,6 +279,15 @@ html, body {
     border-top: solid var(--white) 0.2rem;
     border-left: solid var(--white) 0.2rem;
     z-index: 1;
+}
+
+.copyright {
+    width: 15%;
+    position: fixed;
+    margin-left: 1%;
+    font-weight: 600;
+    color: var(--white);
+    z-index: 1;
 }}
 @media only screen and (max-width: 768px) {
   /* For Mobile */
