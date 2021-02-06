@@ -2,6 +2,27 @@
 #+DATE:
 #+LaTeX_CLASS: notes
 #+OPTIONS: toc:nil
+* Table of Contents :TOC:
+- [[#files][Files]]
+  - [[#fileindexhtml][file:./index.html]]
+  - [[#filepagesabouthtml][file:./pages/about.html]]
+  - [[#filepagesbloghtml][file:./pages/blog.html]]
+  - [[#filepagesessayshtml][file:./pages/essays.html]]
+  - [[#filepagescontacthtml][file:./pages/contact.html]]
+  - [[#filepagesresumehtml][file:./pages/resume.html]]
+  - [[#mkdir-for-essays-contingent-on-naming-essayswritingspapers][mkdir for essays (contingent on naming essays/writings/papers)]]
+- [[#components][Components]]
+  - [[#head][HEAD+=]]
+  - [[#sidebar--footer--decor][Sidebar + Footer + Decor]]
+  - [[#mains][Mains]]
+  - [[#blog-posts][Blog Posts]]
+  - [[#essay-posts][Essay Posts]]
+- [[#css][CSS]]
+  - [[#files-1][Files]]
+  - [[#universal][Universal+=]]
+  - [[#desktop][Desktop+=]]
+  - [[#mobile][Mobile+=]]
+
 * Files
 ** file:./index.html
 #+begin_src html :tangle index.html :noweb no-export
@@ -302,7 +323,7 @@
     <p>
         Site built by exploring literate programming techniques.
         Check out the single source file
-        <a href="https://www.github.com/jonathanmfung/jonathanmfung.github.io/main.org">here</a>.
+        <a href="https://www.github.com/jonathanmfung/jonathanmfung.github.io/blob/main/main.org">here</a>.
         Almost every single aspect of this site was intentionally designed. Read more HERE (insert blog link).
     </p>
 </div>
