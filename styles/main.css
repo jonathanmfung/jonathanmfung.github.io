@@ -56,6 +56,11 @@ html, body {
     font-weight: 700;
 }
 
+.blog-sidebar {
+    visibility: visible;
+    /* align-self: end; */
+}
+
 .sidebar-name a{
     text-decoration: none;
 }
@@ -127,6 +132,11 @@ html, body {
 .content-container > p {
     margin: 2% 5%;
 }
+
+.blog-container {
+    max-width: 80ch;
+    text-indent: 2rem;
+}
 .content-container > ul {
     list-style-type: none;
     margin: -2% 2%;
@@ -136,14 +146,14 @@ html, body {
     text-decoration-color: var(--accent);
     text-decoration-thickness: 0.2rem;
 }
-.content-container p a:hover{
-    color: var(--black);
-    border-top: 0.2rem solid var(--accent);
+
+/* visted-hover declaration order matters */
+.content-container p a:visited {
+    /* color: var(--main-gray); */
 }
 
-.content-container p a:visited {
-    color: var(--main-gray);
-    text-decoration-color: var(--accent);
+.content-container p a:hover{
+    text-decoration-color: var(--primary);
 }
 
 .content-divider {
@@ -170,13 +180,13 @@ html, body {
 }
 
 .featured a {
-    color: var(--accent);
-    text-decoration: none;
+    color: var(--black);
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 0.2rem;
 }
 
 .featured a:hover {
-    color: var(--accent);
-    text-decoration: underline;
+    text-decoration-color: var(--primary);
 }
 
 /* https://stackoverflow.com/questions/22763127/aligning-text-on-a-specific-character/22763427 */
@@ -205,7 +215,7 @@ html, body {
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     row-gap: 3.5rem;
     grid-auto-flow: row;
-    
+
     justify-items: center;
     justify-content: space-evenly;
 }
