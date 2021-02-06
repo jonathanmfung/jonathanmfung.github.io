@@ -122,8 +122,8 @@
     <!-- Place favicon.ico in the root directory -->
     
     <!-- Need to toggle this when deploying -->
-    <base href="/home/jonat/personal-site/">
-    <!-- <base href="https://jonathanmfung.github.io/"> -->
+    <!-- <base href="/home/jonat/personal-site/"> -->
+    <base href="https://jonathanmfung.github.io/">
 
     <title>Jonathan Fung</title>
     <link href="./styles/main.css" rel="stylesheet" />
