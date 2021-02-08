@@ -142,7 +142,7 @@
 #+begin_src web  :noweb no-export :noweb-ref sidebar
 <div class="sidebar-container">
     <div class="sidebar-name">
-        <a href="./index.html">Jonathan Fung</a>
+        <a href="./">Jonathan Fung</a>
     </div>
     <div class="sidebar-routes">
         <ul class="sidebar-lists">
