@@ -18,6 +18,7 @@
   - [[#blog-posts][Blog Posts]]
   - [[#essay-posts][Essay Posts]]
 - [[#css][CSS]]
+  - [[#stella-says-to-remove-bracketscorners-and-to-shrink-sidebar][Stella says to remove brackets/corners, and to shrink sidebar]]
   - [[#files-1][Files]]
   - [[#universal][Universal+=]]
   - [[#desktop][Desktop+=]]
@@ -188,40 +189,8 @@
 #+begin_src web  :noweb no-export :noweb-ref sidebar-blog
 <div class="sidebar-container blog-sidebar">
     <div class="sidebar-name">
-        <a href="./pages/blog.html">Back</a>
+        <a href="./pages/blog.html">Back to Blog</a>
     </div>
-    <!--
-    <div class="sidebar-routes">
-        <ul class="sidebar-lists">
-            <li>
-                <a class="pages" href="./pages/about.html">About</a>
-            </li>
-            <li>
-                <a class="pages" href="./pages/blog.html">Blog</a>
-            </li>
-            <li>
-                <a class="pages" href="./pages/essays.html">Essays</a>
-            </li>
-            <br>
-            <li>
-                <a class="pages" href="./pages/contact.html">Contact</a>
-            </li>
-            <li>
-                <a class="pages" href="./pages/resume.html">Résumé</a>
-            </li>
-        </ul>
-    </div>
-    -->
-    <!--
-    <div class="sidebar-links">
-        <ul class="sidebar-lists">
-            <li><a href="mailto:jonathanfung2000@gmail.com">Email</a></li>
-            <li><a href="https://www.linkedin.com/in/jonathanmfung">LinkedIn</a></li>
-            <li><a href="https://github.com/jonathanmfung/">GitHub</a></li>
-            <li><a href="/JonathanFung_Resume.pdf">Resume</a></li>
-        </ul>
-    </div>
-    -->
     <div class="sidebar-links-mobile">
         <ul class="sidebar-lists">
             <li><a href="mailto:jonathanfung2000@gmail.com"><i class="fas fa-envelope"></i></a></li>
@@ -239,13 +208,7 @@
 #+end_src
 *** decor+=
 #+begin_src web :noweb no-export :noweb-ref decor
-<!-- think these are the two breadcrumb things on the right 
-<div>
-    <div class="bracket" style="top: 30%; right: 50px; transform: rotate(0deg) scale(0.75); border-color:var(--main-gray); "></div>
-    <div class="bracket" style="top: 40%; right: 50px; transform: rotate(-90deg) scale(0.75); border-color:var(--main-gray); "></div>
-</div>
--->
-
+<!--
 <div class="decor">
     <div class="bracket" style="top: 25px; left: 25px; transform: rotate(0deg);"></div>
     <div class="bracket" style="bottom: 25px; left: 25px; transform: rotate(-90deg);"></div>
@@ -255,6 +218,7 @@
     <div class="bracket" style="top: 25px; right: 25px; transform: rotate(90deg); border-color:var(--black);"></div>
     <div class="bracket" style="bottom: 25px; right: 25px; transform: rotate(180deg);border-color:var(--black);"></div>
 </div>
+-->
 #+end_src
 ** Mains
 *** home+=
@@ -268,6 +232,9 @@
     </p>
     <p style="font-weight: 600;">
         I strive to understand fundamentals of the world. From Materials Science to Information Theory to Experience Design, I aim to explore the root cause of any phenomenon.
+    </p>
+    <p style="font-weight: 600;">
+        I wish to understand fundamentals of the world. I aim to explore the root cause of phenomena.
     </p>
     <hr class="content-divider" />
     <p>
@@ -291,9 +258,10 @@
         <br>
         <ul>
             <li>
-                <span>Project</span> -
-                <span><a href="https://google.com">Designathon at UCI 2020</a></span>
+                <span>Case Study</span> -
+                <span><a href="./posts/201123.html">Designathon at UCI 2020</a></span>
             </li>
+            <!--
             <li>
                 <span>Blog</span> -
                 <span><a href="https://google.com">Linux Setup + Workflow</a></span>
@@ -302,6 +270,7 @@
                 <span>Essay</span> -
                 <span><a href="https://google.com">Quantum Cognitive Dissonance</a></span>
             </li>
+            -->
         </ul>
     </div>
 </div>
@@ -324,7 +293,9 @@
         Site built by exploring literate programming techniques.
         Check out the single source file
         <a href="https://www.github.com/jonathanmfung/jonathanmfung.github.io/blob/main/main.org">here</a>.
-        Almost every single aspect of this site was intentionally designed. Read more HERE (insert blog link).
+        Almost every single aspect of this site was intentionally designed.
+
+        <!-- Read more HERE (insert blog link). -->
     </p>
 </div>
 #+end_src
@@ -338,31 +309,32 @@
 Here is my blog. A stream of consciousness. Filled with random thoughts I have jotted down over my recent life. Unfilled with all the thoughts too trivial or extreme. Associated dates are of birth, not completion. I believe these reflect who I am as a person, covering many of my major interests. I share these to you, the reader, in hope that you will read them.
     </p>
     <p>
-        Attributes are out of 10 points each.
+        Attributes are scaled 1 to 10, low to high in magnitude.
     </p>
     <ul>
         <li>-  Abstract: How vague the concepts of the post are</li>
         <li>-  Perspective: How much my personal views and beliefs guide the post</li>
-        <li>-  Breadth: How directed the post is</li>
+        <li>-  Direct: How direct the post is</li>
         <li>-  Intensity: Sum of the three Attributes</li>
     </ul>
     <div class="card-container">
         <div class="card"">
             <h1>
-                <a href="./index.html">
+                <a href="./posts/201123.html">
                     Designathon Case Study
                 </a>
             </h1>
             <ul>
                 <li>Abstract - 2</li>
                 <li>Persepective - 8</li>
-                <li>Breadth - 5</li>
+                <li>Direct - 5</li>
             </ul>
             <div class="score">
                 <p>Intensity</p>
                 <h2>15</h2>
             </div>
         </div>
+        <!--
         <div class="card"">
             <h1>
                 <a href="./posts/testblog.html">
@@ -379,118 +351,7 @@ Here is my blog. A stream of consciousness. Filled with random thoughts I have j
                 <h2>15</h2>
             </div>
         </div>
-        <div class="card"">
-            <h1>
-                <a href="./index.html">
-                    Lorem Ipsum Dolar
-                </a>
-            </h1>
-            <ul>
-                <li>Abstract - 7</li>
-                <li>Persepective - 3</li>
-                <li>Breadth - 5</li>
-            </ul>
-            <div class="score">
-                <p>Intensity</p>
-                <h2>15</h2>
-            </div>
-        </div>
-        <div class="card"">
-            <h1>
-                <a href="./index.html">
-                    Lorem Ipsum Dolar
-                </a>
-            </h1>
-            <ul>
-                <li>Abstract - 7</li>
-                <li>Persepective - 3</li>
-                <li>Breadth - 5</li>
-            </ul>
-            <div class="score">
-                <p>Intensity</p>
-                <h2>15</h2>
-            </div>
-        </div>
-        <div class="card"">
-            <h1>
-                <a href="./index.html">
-                    Lorem Ipsum Dolar
-                </a>
-            </h1>
-            <ul>
-                <li>Abstract - 7</li>
-                <li>Persepective - 3</li>
-                <li>Breadth - 5</li>
-            </ul>
-            <div class="score">
-                <p>Intensity</p>
-                <h2>15</h2>
-            </div>
-        </div>
-        <div class="card"">
-            <h1>
-                <a href="./index.html">
-                    Lorem Ipsum Dolar
-                </a>
-            </h1>
-            <ul>
-                <li>Abstract - 7</li>
-                <li>Persepective - 3</li>
-                <li>Breadth - 5</li>
-            </ul>
-            <div class="score">
-                <p>Intensity</p>
-                <h2>15</h2>
-            </div>
-        </div>
-        <div class="card"">
-            <h1>
-                <a href="./index.html">
-                    Lorem Ipsum Dolar
-                </a>
-            </h1>
-            <ul>
-                <li>Abstract - 7</li>
-                <li>Persepective - 3</li>
-                <li>Breadth - 5</li>
-            </ul>
-            <div class="score">
-                <p>Intensity</p>
-                <h2>15</h2>
-            </div>
-        </div>
-        <div class="card"">
-            <h1>
-                <a href="./index.html">
-                    Lorem Ipsum Dolar
-                </a>
-            </h1>
-            <ul>
-                <li>Abstract - 7</li>
-                <li>Persepective - 3</li>
-                <li>Breadth - 5</li>
-            </ul>
-            <div class="score">
-                <p>Intensity</p>
-                <h2>15</h2>
-            </div>
-        </div>
-        <div class="card"">
-            <h1>
-                <a href="./index.html">
-                    Lorem Ipsum Dolar
-                </a>
-            </h1>
-            <ul>
-                <li>Abstract - 7</li>
-                <li>Persepective - 3</li>
-                <li>Breadth - 5</li>
-            </ul>
-            <div class="score">
-                <p>Intensity</p>
-                <h2>15</h2>
-            </div>
-        </div>
+        -->
     </div>
 </div>
 #+end_src
@@ -534,13 +395,16 @@ Here is my blog. A stream of consciousness. Filled with random thoughts I have j
 </div>
 #+end_src
 ** Blog Posts
-*** TODO Blog Template [0/4]
-**** TODO TLDR, Questions, Date
-**** TODO Restricted width content-container, name it content-blog (max-width: 75ch;)
+*** TODO Blog Template [2/7]
+**** TODO TLDR, Questions, Intensity/Attributes, Date
+**** TODO Image formatting (fit width, height)
+**** TODO Add section for pdf version link (can just be the first p)
+**** DONE Restricted width content-container, name it content-blog (max-width: 75ch;)
 **** TODO keep vertical bar, but make it black
 **** TODO only a small blue rectangle to navigate back to Blogs page
 ***** This might need to be a new absolute element
 ***** inset Back on top left bracket
+**** DONE Change scales based off stella notes
 *** file:./posts/testblog.html
 #+begin_src html :tangle ./posts/testblog.html :noweb no-export
 <!DOCTYPE html>
@@ -565,14 +429,26 @@ Here is my blog. A stream of consciousness. Filled with random thoughts I have j
         Based in California, currently looking for a job in almost anything. Willing to relocate.
         <a href="./pages/contact.html">Contact me</a> to start a conversation.
     </p>
+    <h1>
+        This is a header h1
+    </h1>
+    <h2>
+        This is a header h2
+    </h2>
     <p>
  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus libero a maximus pulvinar. Curabitur id venenatis urna, a aliquet erat. Donec id dolor sem. Nulla non imperdiet tortor. In eros leo, tempor eleifend massa ornare, semper egestas quam. Sed efficitur auctor dignissim. Proin purus purus, dictum et imperdiet non, tempus ut mauris. Suspendisse faucibus semper ligula vel molestie. Sed sollicitudin augue ultricies rutrum molestie. Integer cursus nisl ut leo tempor, et cursus mi rutrum. Aliquam non tellus eu velit volutpat hendrerit. Praesent consectetur turpis sed dignissim placerat.
 
     </p>
+    <h2>
+        This is a header h2
+    </h2>
     <p>
 Vivamus tincidunt egestas enim, ac tempor orci. Sed luctus, risus nec maximus fringilla, massa augue semper quam, quis lacinia nisl orci vitae sem. Cras lorem enim, tempus non arcu id, varius feugiat massa. Aliquam sodales mauris eu dapibus vestibulum. Vivamus accumsan turpis at efficitur cursus. Nunc convallis, odio id porta malesuada, est nisi accumsan arcu, eu pretium nisi arcu ut magna. Pellentesque sollicitudin consequat leo sit amet consequat. Ut pulvinar mauris a lacus accumsan venenatis. Suspendisse tincidunt, est non bibendum volutpat, ex arcu pretium lacus, eget viverra dolor tortor tincidunt massa. Nunc ut nunc ipsum. Nam et velit nec turpis varius faucibus. Maecenas interdum, odio non euismod volutpat, tortor risus pellentesque lectus, nec interdum sem metus porttitor erat. Proin congue orci in ultricies finibus. Integer vitae egestas purus, eget malesuada felis. Etiam tempor, magna id facilisis ultricies, dolor nunc mollis massa, quis bibendum ante quam sed dolor. Pellentesque eget commodo ex.
 
     </p>
+    <h2 class="question">
+        This is a question h2
+    </h2>
     <p>
 Praesent sapien enim, tincidunt ac lorem placerat, venenatis facilisis turpis. Duis at fringilla sapien, nec dapibus ipsum. Duis egestas tempus porttitor. Ut dolor eros, sollicitudin quis quam sit amet, congue consectetur sem. Proin egestas nisl id suscipit tristique. Ut sed faucibus metus, vel commodo nulla. Nullam fringilla sed felis nec sollicitudin. Mauris consectetur lacinia urna sit amet mattis. Morbi elit leo, consequat nec ipsum a, cursus lobortis turpis. Curabitur vel turpis malesuada, pellentesque diam at, sodales risus. Sed quis scelerisque libero, eget ultricies sem. Vivamus lectus diam, lobortis sit amet tempor vel, suscipit ut lectus.
 
@@ -583,8 +459,211 @@ Integer elementum felis eu sodales hendrerit. Nulla blandit malesuada quam et di
 </div>
 #+end_src
 ** Essay Posts
+*** Designathon Case Study: file:./posts/201123.html
+#+begin_src html :tangle ./posts/201123.html :noweb no-export
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <<HEAD>>
+  <body>
+    <div class="main-container">
+      <<sidebar-blog>>
+      <<_201123>>
+    </div>
+    <<decor>>
+  </body>
+</html>
+#+end_src
+**** 201123+=
+#+begin_src web :noweb no-export :noweb-ref _201123
+<div class="content-container blog-container">
+    <button class="content-title">
+        Designathon Case Study
+    </button>
+    <h1>
+        Intro
+    </h1>
+    <p>
+        Just this past weekend was Design at UCI's first ever Designathon. Unless I am mistaken, this was also the first ever Designathon-type event hosted (remotely) at UC Irvine! For anyone who does not know, Designathons are events where individuals with any level of design experience from the local community complete UI/UX focused projects revolving around a central topic and prompt. This event was planned by Stella Adriana and myself. We started planning in around August and had our eye on the second half of November for the event.
+    </p>
+    <h1>
+        Main Takeways
+    </h1>
+    <h2>
+        1. Segment Operations into a Traditional Structure
+    </h2>
+    <p>
+        Working alone allows one to use a workflow of their own, known to be efficient and personalized. Wrangling over a collaborative platform such as Google Docs is good for exploration, but poor for productivity. As the club matures, traditional segmentation should trade such exploration for productivity. Of course, collaboration is still necessary, but not as essential to day-to-day work.
+    </p>
+    <h2>
+        2. Be careful of Verbosity, and highlight Key Info
+    </h2>
+    <p>
+        Information will always have a hierarchy of importance, so in a set of dense information, point out the key parts. This goes for any form of communication, such as emails, social media, and documentation.
+
+    </p>
+    <h2>
+        3. Centralize Communication Channels
+    </h2>
+    <p>
+        Communication is key to a multi-faceted project. In a small team where many hats are worn, understanding and    knowledge is of utmost importance.
+    </p>
+    <h1>
+        Issue 1: Organization
+    </h1>
+    <h2>
+        1.1: Google Drive + Docs/Sheets/Forms/Slides
+    </h2>
+    <p>
+        
+        All our files were organized in a sole Google Drive folder mixing Docs, Sheets, forms, and Slides. As you can imagine, storing everything on the same level in a folder proved to be annoying to manage. File names were inconsistent, difficult to understand, and were uncomfortably long.
+    </p>
+    <p>
+        Frequently, we would have documents that shared the same components. For example, we had some schedule variant in 3 different documents: Logistics, Logistics - Workshop, and Logistics - Judges. We started with the plain Logistics file, and when we thought it was sound we branched it off into the two meant for external use. But of course, while working through the project we had to tweak the main one, which caused the other two to be out of sync. This was extremely annoying to work with, and led to lots of confusion.
+    </p>
+    <p>
+        A very nice way of resolving this issue would be utilizing <a href="https://en.wikipedia.org/wiki/Transclusion">transclusion</a>, where document contents are essentially linked and previewed within other documents. This would allow for extremely consistent specifications, and soundness that everything is synced together.To me, this concept is similar to concepts like Variables in programming, and Components in design tools like Figma.
+    </p>
+    <p>
+        Google Docs does not support linking files within the same drive, let alone some sort of transclusion. The only experience I have with this is in Emacs' Org Mode, a type of markup format. From rudimentary research I have not seen any user software implement this concept. I have seen references in Wikipedia's MediaWiki and in AngularJS.
+    </p>
+    <p>
+        Another idea I had is some sort of <a href="https://orgmode.org/worg/org-contrib/babel/intro.html#literate-programming">tangling</a>, which I also use in Org Mode. This is a similar concept to transclusion, where components can be synced across documents, but tangling focuses more on the component level. Files or documents are mainly built through combining components, the act of tangling.
+    </p>
+    <p>
+
+        I am currently using tangle to create a pure HTML/CSS website. While creating the first version of my personal website, I faced an extremely similar problem of having to sync content between files. My current experience with tangle is solves most of my past problems.
+    </p>
+    <p>
+
+        As far as I know, 'tangle' is a term only relevant to Org Mode. Its use case is primarily when engaging in <a href="https://en.wikipedia.org/wiki/Literate_programming">Literate Programming</a>. And Literate Programming is a fairly niche topic in the programming world, most commonly seen concerning Data Analysis with Jupyter/Pluto/Wolfram Notebooks and R Markdown. I doubt there is a popularized method for tangling with plain english text.
+    </p>
+    <h2>1.2: Team Formation + Emails</h2>
+    <p>
+        
+        Our formation process consisted of Stella and I working through the spreadsheet of <200 submissions, and manually combing through and organizing teams. We also fell into a hole of working with MailChimp, our club's email newsletter service. We simply were not knowledgeable on the service, and thus struggled with a main part of our plan.
+    </p>
+    <p>
+        
+        I currently am not aware of any specific team formation software, but i believe there should be a generalized platform out there that would fit this application. Another solution is to <b>script the process</b> either inside of Google Docs or in a more traditional data pipeline.
+    </p>
+    <h2>1.3: Team Names
+    </h2>
+    <p>    When discussing our team formation process, I threw out an idea of auto-assigning teams to a randomized color hexcode (hexadecimal triplet, e.g. #1032EF). Stella and I thought it was a fun idea that could work, since color is heavily intertwined with design. It did turn out to be a fun concept with incorporating finalists' colors into the slides, but the cons outweighed the pros.
+    </p>
+    <p>The random nature of hexcodes meant any form of communication with them was destined to fail. We assumed teams would be able to remember and recite their codes, but obviously that did not prove to be true. Our Finale presentation slides initially only contained finalist team's hexcode, but during the event no one remembered their code and we were asked to include member names, so we had to add them in on the fly. When the judges were discussing which winners to choose, they also faced this same issue. There was no way any of them were going to recite '#1032EF', rather they logically went with the product names of the projects. Even between Stella and I, we had to resort to a mixture of 'the group with nice UI', 'the group with John Doe', etc. All in all, our hexcodes were just functionally worse glorified indices (1, 2, 3, ...). As a novel concept, they were good for internal consistency, but extremely poor for uses in human communication.
+    </p>
+    <p>The solution to this would be to just take the simple route and let the teams submit their <b>own project name</b>, and keep hexcodes or a similar system for internal consistency.
+    </p>
+    <p>One club board member suggested the idea of having application forms being submitted by one member for a whole team. This would ensure that everyone has teams before hand and would be pretty easy to manage. However, this idea would breakdown when teams change and dissolve between applying and the event. This situation occurred a handful of times, and was still a pain with our current system.
+    </p>
+
+    <h1>Issue 2: Verbosity
+    </h1>
+    <p>This designathon was our club's largest undertaking yet. We had to plan inside and out, on both our side and the participants and judges. We unconsciously decided to go through this process by being extremely detailed and verbose.
+    </p>
+    <h2>2.1: Challenge Brief
+    </h2>
+    <p>    Every participant was required to follow our Challenge Brief, which basically had everything one needed to know to participate. It included sections like the Prompt, Participant Requirements, Submission Process, Rubric, and Prizes. As you can imagine, it was a fairly dense document, which resulted in many people not seeming to read and/or process all of it.
+    </p>
+    <p>We received many questions regarding even the prompt itself. People asked if they could work on a mobile app, when the prompt clearly stated to 'design your own desktop app'. To me, this signifies that there must have been something wrong with the way we or the prompt presented the information. I am not sure if these questions stemmed from their own wishes in projects, or our informational writing, but it should be noted nonetheless.
+    </p>
+    <p>I personally think our Challenge Brief PDF document had clear visual hierarchy and organization. So I believe a solution would only have to add to it, such as <b>visually highlighting key parts</b> of the PDF or making another brief flyer with only select key parts. The latter option may prove to be more confusing with more things for participants to manage.
+    </p>
+
+    <h2>    2.2: Communication with Judges
+    </h2>
+    <p>    Likewise, we tried to be as clear and detailed with our communications with the 4 judges + 1 workshop host that graciously agreed to participate in our event. But we may have been a bit too detailed. Our logistics document was a couple pages long, in addition to numerous emails and nuanced scheduling information. Looking back, I have no idea how we thought busy professionals would read a 3-ish page document + all the correspondence and have photographic memory of them.
+    </p>
+    <p>I believe solutions for this issue would be similar to <i>(2.1)</i>, where key info can be highlighted and segmented away from the noise. Correspondence paragraphs could be reduced to _bullets or key highlights_, or at least be supplemented with some. On the grading spreadsheet, we included notes that were a couple sentences long, which was definitely not apt for a spreadsheet nor for our judges. Instead, they could be replaced with less mentally intensive elements such as <b>cell colors and border thicknesses</b>.
+    </p>
+
+    <p>In summary, Stella and I thought verbosity was a good substitute for usability, but clearly it was not. Of course, hindsight is 20/20. There could also be similar improvements  to accompanying materials such as our website or marketing flyers and descriptions.
+    </p>
+    <h2>Issue 3: Internal Communication Channels
+    </h2>
+    <p>As an overall club, we have always struggled with using a consistent communication platform. As of writing we have used: Facebook Messenger for most of our group chats, Discord for public facing channels with some internal ones, Email for general and board Newsletters, and whatever one-to-one channels exist on SMS/iMessage/etc.
+    </p>
+    <p>Since this event was mostly handled by Stella and me, we were pretty comfortable just using Facebook Messenger for everything. This however is fairly difficult to actually search through and is not suitable for productive messaging. We also used Discord for its Voice Channels which allowed us to talk freely and have relaxed meetings.
+    </p>
+    <p>Stella handled pretty much all of the communication, both with externals and our internal teams. I trusted her enough to do this, but it also led to me being a tad left in the dark about certain information. I would always have to ask her if she did a certain task or how a party responded to a request.
+    </p>
+    <p>These more minor problems could be solved by <b>fully utilizing the potential of a platform</b> like Discord or Slack, where dedicated channels with various combinations of members could be set up with ease. These types of platforms also have functions like pinned messages and voice channels, which could improve the efficiency and friction of our communication.
+    </p>
+</div>
+
+    #+end_src
+    
+    #+begin_src 
+    <h1>    Appendix
+    </h1>
+    <h2>    A) Process/Primer
+    </h2>
+    <p>    Stella started planning by listing our the main segments of the weekend: Kickoff, Finale, Workshops, QnA, Presentations, Winners Ceremony (We later added a Raffle segment after corresponding with Sketch). Then we needed to layout aspects to work on internally: Application, Teams, Communication Channels (judges + applicants), Submissions, Grading, Winners. From all this, we could begin working on an event timetable and the various documents to organize the event and our thoughts.
+    </p>
+    <p>Stella single-handedly contacted all potential speakers, and formed our club's partnership with Sketch.
+    </p>
+    <p>Here is the final list of documents we had, all in one Google Drive folder:
+    </p>
+    <ul>
+        <li>        - Folder: Graphics
+        </li>
+        <ul>
+            <li>            + text-logo-white.png
+            </li>
+            <li>            + text-logo-black.png
+            </li>
+            <li>            + logo-white.png
+            </li>
+            <li>            + logo-black.png
+            </li>
+            <li>            + flower.png
+            </li>
+            <li>            + designathon_banner.ai
+            </li>
+            <li>            + designathon_banner.FINAL.png
+            </li>
+        </ul>
+        - Docs
+        + Partnership Contract
+        + Logistics
+        + Designathon Logistics - Workshop
+        + Designathon Logistics - Judges
+        + Designathon Ideation
+        + Designathon Challenge Brief
+        + Designathon - Website + Registration Form
+        + Designathon - Finalists Email
+        + Designathon - Confirmation Email
+        - Sheets
+        + Designathon at UCI: Teams
+        + Designathon at UCI: Submission Form (Responses)
+        + Designathon at UCI: Public Teams
+        + Designathon at UCI: Application Form (Responses)
+        + Designathon at UCI: Public Grading Spreadsheet
+        + Designathon at UCI: Grading Spreadsheet
+        + Copy of Designathon at UCI: Grading Spreadsheet
+        - Forms
+        + Designathon at UCI: Submission Form
+        + Designathon at UCI: Application Form
+        + Copy of Designathon at UCI: Application Form
+        + Copy of Copy of Designathon at UCI: Application Form
+        - Slides
+        + Designathon at UCI: Kickoff
+        + Designathon at UCI: Finale
+    </ul>
+    <p>    Hopefully this gives you enough of an idea in how we worked internally. I won't be going into an in-depth review of our process, as I believe there isn't much useful info in it. Most of it was Stella and I talking through logistics and working through documents side-by-side. However, if you are interested in learning more or hosting your own event, contact me at _jonathanfung2000@gmail.com_ for more info.
+    </p>
+    <h2>    B) Website
+    </h2>
+    <p>    #+attr_latex: :height 500px
+        [[file:~/Personal/Designathon2020_Website.png]]
+        ,*** C) Challenge Brief
+        ,#+attr_latex: :height 300px
+        [[file:~/Personal/Designathon2020_ChallengeBrief.pdf]]
+    </p>
+#+end_src
 
 * CSS
+** TODO Stella says to remove brackets/corners, and to shrink sidebar
 ** Files
 *** file:./styles/main.css
 #+begin_src css :tangle ./styles/main.css :noweb no-export
@@ -624,7 +703,8 @@ html, body {
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 25.5% 74.5%;
+    /* grid-template-columns: 25.5% 74.5%; */
+    grid-template-columns: 20.5% 79.5%;
 }
 
 .sidebar-container {
@@ -735,6 +815,31 @@ html, body {
     max-width: 80ch;
     text-indent: 2rem;
 }
+
+.blog-container h1 {
+    margin: 1% 5%;
+    font-weight: 600;
+    font-size: 1.728em;
+}
+
+.blog-container h2 {
+    margin: 3% 5% 2% 5%;
+    font-weight: 600;
+    font-size: 1.44em;
+}
+
+.blog-container h2.question {
+    margin: 3% 5%;
+    font-weight: 600;
+    font-style: italic;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.blog-container p {
+    font-size: 1em;
+}
+
 .content-container > ul {
     list-style-type: none;
     margin: -2% 2%;
@@ -1032,4 +1137,3 @@ html, body {
     display: none;
 }}
 #+end_src
-
