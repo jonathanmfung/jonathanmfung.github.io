@@ -7,4 +7,5 @@ Check out the single source file [[https://www.github.com/jonathanmfung/jonathan
 
 [[https://jonathanmfung.github.io]]
 
-INSERT SNIPPETS AND TALK I GOT THEM FROM
+* TODOs
+** TODO Insert snippets and talk i got them from

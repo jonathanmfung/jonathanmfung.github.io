@@ -123,8 +123,8 @@
     <!-- Place favicon.ico in the root directory -->
     
     <!-- Need to toggle this when deploying -->
-    <!-- <base href="/home/jonat/personal-site/"> -->
-    <base href="https://jonathanmfung.github.io/">
+    <base href="/home/jonat/personal-site/">
+    <!-- <base href="https://jonathanmfung.github.io/"> -->
 
     <title>Jonathan Fung</title>
     <link href="./styles/main.css" rel="stylesheet" />
@@ -809,8 +809,9 @@ html, body {
 }
 
 .blog-container {
-    max-width: 80ch;
-    text-indent: 2rem;
+    max-width: 100ch;
+    /* text-indent: 2rem; */
+    margin: auto;
 }
 
 .blog-container h1 {
@@ -835,6 +836,7 @@ html, body {
 
 .blog-container p {
     font-size: 1em;
+    padding: 0 2em;
 }
 
 .content-container > ul {
