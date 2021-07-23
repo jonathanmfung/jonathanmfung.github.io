@@ -264,6 +264,9 @@ add this back into block to include =:noweb no-export :noweb-ref decor=
     </div>
 </div>
 #+end_src
+*** TODO Add in "looking for a full time job in X" after "graduating in Dec 2021"
+*** TODO Maybe also starting from bottom of electrons and also top with systems etc
+*** TODO Maybe increase font size (prob not weight) of Featured Links
 *** about+=
 #+begin_src web :noweb no-export :noweb-ref about
 <div class="content-container">
@@ -384,7 +387,7 @@ Here is my blog. A stream of consciousness. Filled with random thoughts I have j
 </div>
 #+end_src
 ** Blog Posts
-*** TODO Blog Template [2/7]
+*** TODO Blog Template [2/8]
 **** TODO TLDR, Questions, Intensity/Attributes, Date
 **** TODO Image formatting (fit width, height)
 **** TODO Add section for pdf version link (can just be the first p)
@@ -393,6 +396,7 @@ Here is my blog. A stream of consciousness. Filled with random thoughts I have j
 **** TODO only a small blue rectangle to navigate back to Blogs page
 ***** This might need to be a new absolute element
 ***** inset Back on top left bracket
+**** TODO Consider making Questions be #707070 or some non-black color
 **** DONE Change scales based off stella notes
 *** file:./posts/testblog.html
 #+begin_src html :tangle ./posts/testblog.html :noweb no-export
