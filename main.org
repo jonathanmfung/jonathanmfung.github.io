@@ -231,11 +231,14 @@
         I am a Materials Science Engineering Student at UC Irvine, graduating in December 2021.
     </p>
     <p style="font-weight: 600;">
-        I wish to understand fundamentals of the world. I aim to explore the root cause of phenomena.
+        I like complexity. Systems of atoms, software, hardware, people, concepts, and all that's in-between. There is always more to explore and understand.
     </p>
     <hr class="content-divider" />
     <p>
         I spent the summer of 2019 at <a href="https://meyersound.com">Meyer Sound</a> in Berkeley, California as an Operations Intern. I learned a great deal about how the compliance industry runs. I managed compliance documents from multiple international organizations and submitted direct changes to our internal Product Lifecycle Management System.
+    </p>
+    <p>
+        I am spending the summer of 2021 at the <a href="https://www.heart.org/">American Heart Association</a> in REMOTE, USA as a UX Intern. I am learning how a wide-reaching product behaves and the challenges of complex logic.
     </p>
     <p>
         At UCI, I am a Project Teams Coordinator for <a href="https://designatuci.com/"> Design at UCI</a>. I mainly manage our Project Teams program, which helps students develop UI/UX and related design skills in a practical manner. I have also helped plan and produce our inaugural Designathon.
