@@ -164,16 +164,6 @@
             </li>
         </ul>
     </div>
-    <!--
-    <div class="sidebar-links">
-        <ul class="sidebar-lists">
-            <li><a href="mailto:jonathanfung2000@gmail.com">Email</a></li>
-            <li><a href="https://www.linkedin.com/in/jonathanmfung">LinkedIn</a></li>
-            <li><a href="https://github.com/jonathanmfung/">GitHub</a></li>
-            <li><a href="/JonathanFung_Resume.pdf">Resume</a></li>
-        </ul>
-    </div>
-    -->
     <div class="sidebar-links-mobile">
         <ul class="sidebar-lists">
             <li><a href="mailto:jonathanfung2000@gmail.com"><i class="fas fa-envelope"></i></a></li>
@@ -207,8 +197,8 @@
 <footer></footer>
 #+end_src
 *** decor+=
-#+begin_src web :noweb no-export :noweb-ref decor
-<!--
+add this back into block to include =:noweb no-export :noweb-ref decor=
+#+begin_src web
 <div class="decor">
     <div class="bracket" style="top: 25px; left: 25px; transform: rotate(0deg);"></div>
     <div class="bracket" style="bottom: 25px; left: 25px; transform: rotate(-90deg);"></div>
@@ -218,7 +208,6 @@
     <div class="bracket" style="top: 25px; right: 25px; transform: rotate(90deg); border-color:var(--black);"></div>
     <div class="bracket" style="bottom: 25px; right: 25px; transform: rotate(180deg);border-color:var(--black);"></div>
 </div>
--->
 #+end_src
 ** Mains
 *** home+=
