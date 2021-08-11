@@ -12,13 +12,12 @@
   - [[#filepagesresumehtml][file:./pages/resume.html]]
   - [[#mkdir-for-essays-contingent-on-naming-essayswritingspapers][mkdir for essays (contingent on naming essays/writings/papers)]]
 - [[#components][Components]]
-  - [[#head][HEAD+=]]
+  - [[#head-change-when-deploying][HEAD+= (change when deploying)]]
   - [[#sidebar--footer--decor][Sidebar + Footer + Decor]]
   - [[#mains][Mains]]
   - [[#blog-posts][Blog Posts]]
   - [[#essay-posts][Essay Posts]]
 - [[#css][CSS]]
-  - [[#stella-says-to-remove-bracketscorners-and-to-shrink-sidebar][Stella says to remove brackets/corners, and to shrink sidebar]]
   - [[#files-1][Files]]
   - [[#universal][Universal+=]]
   - [[#desktop][Desktop+=]]
@@ -111,7 +110,7 @@
 #+end_src
 ** TODO mkdir for essays (contingent on naming essays/writings/papers)
 * Components
-** HEAD+=
+** HEAD+= (change when deploying)
 #+begin_src html  :noweb no-export :noweb-ref HEAD
   <head>
     <meta charset="utf-8">
@@ -121,10 +120,10 @@
 
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-    
+
     <!-- Need to toggle this when deploying -->
-    <base href="/home/jonat/personal-site/">
-    <!-- <base href="https://jonathanmfung.github.io/"> -->
+    <!-- <base href="/home/jonat/personal-site/"> -->
+    <base href="https://jonathanmfung.github.io/">
 
     <title>Jonathan Fung</title>
     <link href="./styles/main.css" rel="stylesheet" />
@@ -136,7 +135,6 @@
     <script src="https://kit.fontawesome.com/21b56814b7.js" crossorigin="anonymous"></script>
   </head>
 #+end_src
-*** TODO Add in google analytics tag
 ** Sidebar + Footer + Decor
 *** sidebar+=
 #+begin_src web  :noweb no-export :noweb-ref sidebar
@@ -210,6 +208,17 @@ add this back into block to include =:noweb no-export :noweb-ref decor=
 </div>
 #+end_src
 ** Mains
+*** TODO Add Dark Theme
+- Background: #000000
+  + alternatively: #595959, #707070
+- Primary: #7000e0
+  + (this is the same S and V/L as the blue primary)
+  + or #924dc9 for more saturation
+- Accent: #FFEF00
+  + direct complement of primary
+
+- Reference: https://alexandersandberg.com/theme-switcher/
+  + Or: https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#using-custom-properties
 *** home+=
 #+begin_src web :noweb no-export :noweb-ref home
 <div class="content-container">
@@ -217,17 +226,17 @@ add this back into block to include =:noweb no-export :noweb-ref decor=
         Hello!
     </button>
     <p style="font-weight: 600;">
-        I am a Materials Science Engineering Student at UC Irvine, graduating in December 2021.
+        I am a Materials Science Engineering Student at UC Irvine, graduating in December 2021. Currently looking for a Full-time job in Data, Design, and/or Engineering.
     </p>
     <p style="font-weight: 600;">
-        I like complexity. Systems of atoms, software, hardware, people, concepts, and all that's in-between. There is always more to explore and understand.
+        I enjoy complexity. Systems of atoms, software, hardware, people, concepts, and all that's in-between. There is always more to explore and understand.
     </p>
     <hr class="content-divider" />
     <p>
         I spent the summer of 2019 at <a href="https://meyersound.com">Meyer Sound</a> in Berkeley, California as an Operations Intern. I learned a great deal about how the compliance industry runs. I managed compliance documents from multiple international organizations and submitted direct changes to our internal Product Lifecycle Management System.
     </p>
     <p>
-        I am spending the summer of 2021 at the <a href="https://www.heart.org/">American Heart Association</a> in REMOTE, USA as a UX Intern. I am learning how a wide-reaching product behaves and the challenges of complex logic.
+        I am spending the summer of 2021 at the <a href="https://www.heart.org/">American Heart Association</a> in REMOTE, USA as a Freelance Consultant - UX Design. I am learning how a wide-reaching product behaves and the challenges of complex logic.
     </p>
     <p>
         At UCI, I am a Project Teams Coordinator for <a href="https://designatuci.com/"> Design at UCI</a>. I mainly manage our Project Teams program, which helps students develop UI/UX and related design skills in a practical manner. I have also helped plan and produce our inaugural Designathon.
@@ -264,9 +273,13 @@ add this back into block to include =:noweb no-export :noweb-ref decor=
     </div>
 </div>
 #+end_src
-*** TODO Add in "looking for a full time job in X" after "graduating in Dec 2021"
-*** TODO Maybe also starting from bottom of electrons and also top with systems etc
-*** TODO Maybe increase font size (prob not weight) of Featured Links
+*** TODO 210810 Add a Bookshelf
+- List of books have read, reading, etc.
+  + status/progress markers for each
+  + could color code if wanted, or just TAGs
+    - stats, design, programming, etc.
+- format as a sideways bookshelf, one vertical flexbox
+  + STATUS -- TITLE -- AUTHOR et al.
 *** about+=
 #+begin_src web :noweb no-export :noweb-ref about
 <div class="content-container">
@@ -656,7 +669,6 @@ Integer elementum felis eu sodales hendrerit. Nulla blandit malesuada quam et di
 #+end_src
 
 * CSS
-** TODO Stella says to remove brackets/corners, and to shrink sidebar
 ** Files
 *** file:./styles/main.css
 #+begin_src css :tangle ./styles/main.css :noweb no-export
@@ -864,7 +876,7 @@ html, body {
     max-width: 350px;
     margin: 10% 25% 0%;
     padding: 5%;
-    font-size:  100%;
+    font-size:  110%;
     color: var(--black);
     background-color: white;
     border: 0.2rem var(--main-gray) solid;

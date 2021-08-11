@@ -193,7 +193,7 @@ html, body {
     max-width: 350px;
     margin: 10% 25% 0%;
     padding: 5%;
-    font-size:  100%;
+    font-size:  110%;
     color: var(--black);
     background-color: white;
     border: 0.2rem var(--main-gray) solid;
