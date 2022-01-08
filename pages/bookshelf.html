@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+      <!-- Place favicon.ico in the root directory -->
+  
+      <!-- Need to toggle this when deploying -->
+      <!-- <base href="/home/jonat/personal-site/"> -->
+      <base href="https://jonathanmfung.github.io/">
+  
+      <title>Jonathan Fung</title>
+      <link href="./styles/main.css" rel="stylesheet" />
+      <link rel="icon" type="image/png" href="Assets/favicon1.png" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="Description" content="Jonathan Fung's Website">
+      <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+      <meta content="utf-8" http-equiv="encoding">
+      <script src="https://kit.fontawesome.com/21b56814b7.js" crossorigin="anonymous"></script>
+    </head>
+  <body>
+    <div class="main-container">
+      <div class="sidebar-container">
+          <div class="sidebar-name">
+              <a href="./">Jonathan Fung</a>
+          </div>
+          <div class="sidebar-routes">
+              <ul class="sidebar-lists">
+                  <li>
+                      <a class="pages" href="./pages/about.html">About</a>
+                  </li>
+                  <li>
+                      <a class="pages" href="./pages/blog.html">Blog</a>
+                  </li>
+                  <li>
+                      <a class="pages" href="./pages/bookshelf.html">Bookshelf</a>
+                  </li>
+                  <li>
+                      <a class="pages" href="./pages/essays.html">Essays</a>
+                  </li>
+                  <br>
+                  <li>
+                      <a class="pages" href="./pages/contact.html">Contact</a>
+                  </li>
+                  <li>
+                      <a class="pages" href="./pages/resume.html">Résumé</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="sidebar-links-mobile">
+              <ul class="sidebar-lists">
+                  <li><a href="mailto:jonathanfung2000@gmail.com"><i class="fas fa-envelope"></i></a></li>
+                  <li><a href="https://www.linkedin.com/in/jonathanmfung"><i class="fab fa-linkedin"></i></a></li>
+                  <li><a href="https://github.com/jonathanmfung/"><i class="fab fa-github-square"></i></a></li>
+                  <li><a href="/JonathanFung_Resume.pdf"><i class="fas fa-file-pdf"></i></a></li>
+              </ul>
+          </div>
+          <div class="sidebar-line"></div>
+      </div>
+      <div class="content-container">
+          <button class="content-title">
+              Bookshelf
+          </button>
+          <div class="bookshelf">
+                  <div class="book">
+                      <h1 class="book-percentage" progress="126/471"></h1>
+                      <h1 class="book-title">Regression and Other Stories</h1>
+                      <h1 class="book-author">Gelman et al.</h1>
+                  </div>
+                  <div class="book">
+                      <h1 class="book-percentage" progress="70/555"></h1>
+                      <h1 class="book-title">Statistical Rethinking</h1>
+                      <h1 class="book-author">McElreath</h1>
+                  </div>
+                  <div class="book">
+                      <h1 class="book-percentage" progress="411/595"></h1>
+                      <h1 class="book-title">Introduction to Statistical Learning</h1>
+                      <h1 class="book-author">James et al.</h1>
+                  </div>
+                  <div class="book">
+                      <h1 class="book-percentage" progress="90/379"></h1>
+                      <h1 class="book-title">On Lisp</h1>
+                      <h1 class="book-author">Graham</h1>
+                  </div>
+                  <div class="book">
+                      <h1 class="book-percentage" progress="410/940"></h1>
+                      <h1 class="book-title">Electronic Materials & Devices</h1>
+                      <h1 class="book-author">Kasap</h1>
+                  </div>
+          </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
+<script type="text/javascript">
+  <!-- https://stackoverflow.com/a/7409497 -->
+  var bookDivs = document.getElementsByClassName( 'book-percentage' );
+
+  [].slice.call( bookDivs ).forEach(function ( div ) {
+    div.innerHTML = Math.round(100 * eval(div.getAttribute('progress'))) + "%";
+  });
+</script>
