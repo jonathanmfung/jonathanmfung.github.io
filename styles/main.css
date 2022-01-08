@@ -1,6 +1,7 @@
 /*Tested mainly on 1920x1080*/
 
 :root {
+    /*Roboto For Resume*/
     font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
 
     --primary: #00BFE0;
@@ -12,7 +13,18 @@
     /* this is 7:1 contrast with white */
     /* --main-gray: #595959; */
     --sidebar-link-hover: #cccaca;
-} /*Roboto For Resume*/
+}
+
+:root .dark-theme {
+    --primary: #7000e0;
+    --accent: #FFEF00;
+    --white: #000000;
+    --black: #ffffff;
+    --main-gray: #707070;
+    /* this is 7:1 contrast with white */
+    /* --main-gray: #595959; */
+    --sidebar-link-hover: #cccaca;
+}
 
 html, body {
     margin: 0;
@@ -114,7 +126,7 @@ html, body {
 }
 
 .content-title {
-    font-size:  165%; 
+    font-size:  165%;
     color: var(--main-gray);
     background-color: white;
     margin-left: 5%;
@@ -325,13 +337,47 @@ html, body {
     font-weight: 600;
     color: var(--white);
     z-index: 1;
-}}
+}
+
+.bookshelf {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
+    align-items: center;
+    min-width: 600px;
+}
+
+.book {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    border: 0.3rem var(--main-gray) solid;
+    justify-content: space-around;
+    margin: 0.5rem;
+}
+
+.book-percentage {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+.book-title {
+    font-size: 2rem;
+    flex-grow: 2;
+    padding: 0 2vw;
+}
+
+.book-author {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+ }
+}
 @media only screen and (max-width: 768px) {
   /* For Mobile */
 .main-container {
     display: grid;
     width: 100%;
-    height: 100%;
     grid-template-rows: 12% 88%;
 }
 
@@ -344,6 +390,14 @@ html, body {
     grid-template-columns: 10% 20% 25% 15% 20% 10%;
 }
 
+.sidebar-container a{
+    color: var(--white);
+}
+
+.sidebar-container a:hover {
+    color: var(--sidebar-link-hover);
+}
+
 .sidebar-name {
     grid-column: 2 / 2;
     grid-row: 2 / 2;
@@ -353,6 +407,10 @@ html, body {
     font-size: 1rem;
     font-weight: 700;
     align-self: center;
+}
+
+.sidebar-name a {
+    text-decoration: none;
 }
 
 .sidebar-routes {
@@ -372,7 +430,7 @@ html, body {
 }
 
 .sidebar-links-mobile {
-    grid-column: 4 / 4;
+    grid-column: 5 / 5;
     grid-row: 2 / 2;
     font-size: 1.0rem;
     width: 2.5rem;
@@ -412,7 +470,7 @@ html, body {
 .content-container {
     color: var(--black);
     background-color: var(--white);
-    padding: 5vh 5% 15% 5%
+    padding: 4vh 0;
 }
 
 .content-title {
@@ -425,6 +483,37 @@ html, body {
     padding: 0.5rem 0.7rem;
     text-align: center;
     border: 0.2rem var(--main-gray) solid;
+}
+
+.blog-container {
+    max-width: 100ch;
+    /* text-indent: 2rem; */
+    margin: auto;
+}
+
+.blog-container h1 {
+    margin: 1% 5%;
+    font-weight: 600;
+    font-size: 1.728em;
+}
+
+.blog-container h2 {
+    margin: 3% 5% 2% 5%;
+    font-weight: 600;
+    font-size: 1.44em;
+}
+
+.blog-container h2.question {
+    margin: 3% 5%;
+    font-weight: 600;
+    font-style: italic;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.blog-container p {
+    font-size: 1em;
+    padding: 0 2em;
 }
 
 .content-container > p {
@@ -453,7 +542,113 @@ html, body {
     display: none;
 }
 
+.card-container {
+    margin: 3rem 0;
+    display: grid;
+    /* https://css-tricks.com/look-ma-no-media-queries-responsive-layouts-using-css-grid/ */
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    row-gap: 3.5rem;
+    grid-auto-flow: row;
+
+    justify-items: center;
+    justify-content: space-evenly;
+}
+
+.card {
+    border: 0.2rem var(--main-gray) solid;
+    width: 333px;
+    height: 250px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "title title"
+        "scales score";
+}
+
+.card h1 {
+    font-weight: 600;
+    grid-area: title;
+    justify-self: start;
+    margin: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.card h1 a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+.card h1 a:hover {
+    color: var(--main-gray);
+}
+
+.card ul {
+    grid-area: scales;
+    list-style: none;
+    padding: 0;
+    margin-left: 1.5rem;
+    align-self: center;
+    color: var(--main-gray);
+    font-size: 1.1em;
+}
+
+.card .score {
+    grid-area: score;
+    justify-self: end;
+    margin-right: 1.5rem;
+    align-self: center;
+    text-align: right;
+    color: var(--main-gray);
+}
+
+.card .score p {
+    font-style: italic;
+    margin: 0;
+    margin-bottom: 0.4rem;
+    font-size: 1.1em;
+}
+
+.card .score h2 {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 0;
+}
 
 .bracket {
     display: none;
-}}
+}
+
+.bookshelf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    border: 0.3rem var(--main-gray) solid;
+    justify-content: space-around;
+    margin: 0.5rem;
+}
+
+.book-percentage {
+    font-size: 0.75rem;
+    margin-left: 1rem;
+}
+
+.book-title {
+    font-size: 1rem;
+    flex-grow: 2;
+    padding: 0 4vw;
+}
+
+.book-author {
+    font-size: 0.75rem;
+    margin-right: 1rem;
+ }
+        }
