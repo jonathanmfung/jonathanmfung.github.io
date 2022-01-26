@@ -401,7 +401,7 @@ Here is my blog. A stream of consciousness. Filled with random thoughts I have j
                 <h1 class="book-author">Gelman et al.</h1>
             </div>
             <div class="book">
-                <h1 class="book-percentage" progress="70/555"></h1>
+                <h1 class="book-percentage" progress="289/555"></h1>
                 <h1 class="book-title">Statistical Rethinking</h1>
                 <h1 class="book-author">McElreath</h1>
             </div>
@@ -1112,6 +1112,7 @@ html, body {
     font-size: 2rem;
     flex-grow: 2;
     padding: 0 2vw;
+    font-weight: 600;
 }
 
 .book-author {
@@ -1394,6 +1395,7 @@ html, body {
     font-size: 1rem;
     flex-grow: 2;
     padding: 0 4vw;
+    font-weight: 600;
 }
 
 .book-author {
