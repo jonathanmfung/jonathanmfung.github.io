@@ -6,7 +6,7 @@
 
     /* this is 7:1 contrast with white */
     /* --main-gray: #595959; */
-    --sidebar-link-hover: #cccaca;
+    --hover: #cccaca;
 
     /* Light Theme */
     --blue: #00BFE0;
@@ -70,14 +70,6 @@ body {
     background: var(--primary);
 }
 
-.sidebar-container a{
-    color: var(--white);
-}
-
-.sidebar-container a:hover {
-    color: var(--sidebar-link-hover);
-}
-
 .sidebar-name {
     font-size: 32px;
     font-weight: 600;
@@ -89,6 +81,16 @@ body {
     width: 0px;
     height: 90px;
     border: 1.5px solid var(--white);
+}
+
+.sidebar-container button {
+    background-color: inherit;
+    border: none;
+    color: var(--white);
+}
+
+.sidebar-container button:hover{
+    color: var(--gray);
 }
 
 .content-container {
@@ -128,7 +130,6 @@ body {
 .content-container p a:hover{
     text-decoration-color: var(--primary);
 }
-
 @media only screen and (max-width: 899px) {
 
 /* For Mobile */
