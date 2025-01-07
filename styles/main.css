@@ -13,6 +13,7 @@
     --orange: #FF7C00;
     --white: #FFFFFF;
     --black: #000000;
+    --dark-gray: #1C1C1C;
     --gray: #707070;
 
     /* Dark Theme */
@@ -29,7 +30,7 @@
 html[data-theme='dark'] {
     --primary: var(--purple);
     --accent: var(--yellow);
-    --bg: var(--black);
+    --bg: var(--dark-gray);
     --fg: var(--white);
     --frame: var(--white);
 }
@@ -63,7 +64,8 @@ body {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    padding: 10px 15px 10px 75px;
+    padding-block: 10px;
+    padding-inline: 15px;
     gap: 25px;
 
     color: var(--white);
@@ -87,10 +89,13 @@ body {
     background-color: inherit;
     border: none;
     color: var(--white);
+    margin-top: auto;
+    margin-right: 50px;
+    font-size: 16px;
 }
 
 .sidebar-container button:hover{
-    color: var(--gray);
+    color: var(--hover);
 }
 
 .content-container {
@@ -138,12 +143,18 @@ html {
 }
 .main-container {
     flex-direction: column;
+    gap: 0;
 }
 
 .sidebar-container {
     flex-direction: column;
-    padding: 30px 0;
+    padding: 15px 0;
     gap: 15px;
+}
+
+.sidebar-container button {
+    margin-right: auto;
+    margin-left: 10px;
 }
 
 .sidebar-line {
@@ -158,6 +169,10 @@ html {
 
 .content-container {
     padding-inline: 2em;
+}
+
+.decor-container {
+    display: none;
 }
 
 }
