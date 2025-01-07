@@ -17,6 +17,7 @@
 
 :root .dark-theme {
     --primary: #7000e0;
+    --other-primary: #6D00A8
     --accent: #FFEF00;
     --white: #000000;
     --black: #ffffff;
@@ -33,22 +34,32 @@ html, body {
 
 @media only screen and (min-width: 769px) {
   /* For Desktop */
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
 .main-container {
-    display: grid;
-    width: 100%;
-    height: 100%;
-    /* grid-template-columns: 25.5% 74.5%; */
-    grid-template-columns: 20.5% 79.5%;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    gap: 25px;
 }
 
 .sidebar-container {
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 15px 10px 75px;
+    gap: 25px;
+
     color: var(--white);
-    background-color: var(--primary);
-    height: 100%;
-    grid-template-columns: 13% 73% 15%;
-    /* grid-template-rows: 10% 10% 15% 15% 40% 10%; */
-    grid-template-rows: 10vh 10vh 15vh 15vh 40vh 10vh;
+    background: var(--primary);
 }
 
 .sidebar-container a{
@@ -60,13 +71,9 @@ html, body {
 }
 
 .sidebar-name {
-    grid-column: 2 / 2;
-    grid-row: 2 / 2;
-    justify-self: end;
-    max-width: 200px;
+    font-size: 32px;
+    font-weight: 600;
     text-align: right;
-    font-size: 2rem;
-    font-weight: 700;
 }
 
 .blog-sidebar {
@@ -112,24 +119,22 @@ html, body {
 }
 
 .sidebar-line {
-    grid-column: 3 / 3;
-    grid-row: 2 / 6;
-    background-color: var(--white);
-    width: 0.2rem;
-    justify-self: center;
+    width: 0px;
+    height: 90px;
+    border: 1.5px solid var(--white);
 }
 
 .content-container {
     color: var(--black);
     background-color: var(--white);
-    padding: 10vh 20% 15vh 5%;
+    max-width: 500px;
+    padding: 2em 0;
 }
 
 .content-title {
     font-size:  165%;
     color: var(--main-gray);
     background-color: white;
-    margin-left: 5%;
     padding: 0.5rem 0.7rem;
     text-align: center;
     border: 0.2rem var(--main-gray) solid;
@@ -139,10 +144,6 @@ html, body {
     background-color: var(--white);
     border-color: var(--primary);
     color: var(--primary);
-}
-
-.content-container > p {
-    margin: 2% 5%;
 }
 
 .blog-container {

@@ -6,6 +6,3 @@ Built solely with HTML/CSS and Emacs Org-Mode
 Check out the single source file [[https://www.github.com/jonathanmfung/jonathanmfung.github.io/blob/main/main.org][here]]
 
 [[https://jonathanmfung.github.io]]
-
-* TODOs
-** TODO Insert snippets and talk i got them from
