@@ -112,32 +112,39 @@ toggle.onclick = function() {
     /*Roboto For Resume*/
     font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
 
-    --primary: #00BFE0;
-    --accent: #FF7C00;
-    --white: #ffffff;
-    --black: #000000;
-    /* this is my original */
-    --main-gray: #707070;
     /* this is 7:1 contrast with white */
     /* --main-gray: #595959; */
     --sidebar-link-hover: #cccaca;
+
+    /* Light Theme */
+    --blue: #00BFE0;
+    --orange: #FF7C00;
+    --white: #FFFFFF;
+    --black: #000000;
+    --gray: #707070;
+
+    /* Dark Theme */
+    --purple: #7000e0;
+    --yellow: #FFEF00;
+
+    --primary: var(--blue);
+    --accent: var(--orange);
+    --bg: var(--white);
+    --fg: var(--black);
+    --frame: var(--gray);
 }
 
 html[data-theme='dark'] {
-    --primary: #7000e0;
-    --accent: #FFEF00;
-    --white: #000000;
-    --black: #ffffff;
-    --main-gray: #ffffff;
-    /* this is 7:1 contrast with white */
-    /* --main-gray: #595959; */
-    --sidebar-link-hover: #cccaca;
+    --primary: var(--purple);
+    --accent: var(--yellow);
+    --bg: var(--black);
+    --fg: var(--white);
+    --frame: var(--white);
 }
 
 html, body {
-    margin: 0;
     height: 100%;
-    background: var(--white);
+    background: var(--bg);
 }
 
 #+end_src
@@ -186,7 +193,7 @@ body {
     font-size: 32px;
     font-weight: 600;
     text-align: right;
-    color: #ffffff;
+    color: var(--white);
 }
 
 .blog-sidebar {
@@ -234,29 +241,23 @@ body {
 .sidebar-line {
     width: 0px;
     height: 90px;
-    border: 1.5px solid #ffffff;
+    border: 1.5px solid var(--white);
 }
 
 .content-container {
-    color: var(--black);
-    background-color: var(--white);
+    color: var(--fg);
+    background-color: var(--bg);
     max-width: 500px;
     padding: 2em 0;
 }
 
 .content-title {
     font-size:  165%;
-    color: var(--main-gray);
-    background-color: var(--white);
+    color: var(--frame);
+    background-color: var(--bg);
     padding: 0.5rem 0.7rem;
     text-align: center;
-    border: 0.2rem var(--main-gray) solid;
-}
-
-.content-title.test{
-    background-color: var(--white);
-    border-color: var(--primary);
-    color: var(--primary);
+    border: 0.2rem var(--frame) solid;
 }
 
 .decor-container {
@@ -268,7 +269,7 @@ body {
 .bracket {
     width: 50px;
     height: 50px;
-    color: var(--main-gray);
+    color: var(--frame);
 }
 
 .blog-container {
@@ -307,7 +308,7 @@ body {
     margin: -2% 2%;
 }
 .content-container p a{
-    color: var(--black);
+    color: var(--fg);
     text-decoration-color: var(--accent);
     text-decoration-thickness: 0.2rem;
 }
@@ -323,7 +324,7 @@ body {
 
 .content-divider {
     height: 0.05rem;
-    background-color: var(--black);
+    background-color: var(--fg);
 }
 
 .featured {
@@ -332,9 +333,9 @@ body {
     margin: 10% 25% 0%;
     padding: 5%;
     font-size:  110%;
-    color: var(--black);
-    background-color: white;
-    border: 0.2rem var(--main-gray) solid;
+    color: var(--fg);
+    background-color: var(--bg);
+    border: 0.2rem var(--frame) solid;
 }
 
 .featured ul {
@@ -345,7 +346,7 @@ body {
 }
 
 .featured a {
-    color: var(--black);
+    color: var(--fg);
     text-decoration-color: var(--accent);
     text-decoration-thickness: 0.2rem;
 }
@@ -386,7 +387,7 @@ body {
 }
 
 .card {
-    border: 0.2rem var(--main-gray) solid;
+    border: 0.2rem var(--frame) solid;
     width: 333px;
     height: 250px;
     display: grid;
@@ -407,11 +408,11 @@ body {
 
 .card h1 a{
     text-decoration: none;
-    color: var(--black);
+    color: var(--fg);
 }
 
 .card h1 a:hover {
-    color: var(--main-gray);
+    color: var(--frame);
 }
 
 .card ul {
@@ -420,7 +421,7 @@ body {
     padding: 0;
     margin-left: 1.5rem;
     align-self: center;
-    color: var(--main-gray);
+    color: var(--frame);
     font-size: 1.1em;
 }
 
