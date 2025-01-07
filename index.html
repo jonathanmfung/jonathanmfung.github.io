@@ -1,26 +1,15 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
+<html lang="en-us">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-    <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
-    <!-- Place favicon.ico in the root directory -->
-  
-    <!-- Need to toggle this when deploying -->
-    <!-- <base href="/home/jonat/personal/jonathanmfung.github.io/">
-    <!-- <base href="https://jonathanmfung.github.io/"> -->
   
     <title>Jonathan Fung</title>
     <link href="./styles/main.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="Assets/favicon1.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
     <meta name="Description" content="Jonathan Fung's Website">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
-    <script src="https://kit.fontawesome.com/21b56814b7.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="main-container">
@@ -29,6 +18,7 @@
               Jonathan<br/>Fung
           </div>
           <div class="sidebar-line"></div>
+          <button id="theme-toggle">🌓︎</button>
       </div>
       <div class="content-container">
           <button class="content-title">
@@ -57,4 +47,18 @@
       </div>
     </div>
   </body>
+  <script type="text/javascript">
+    var toggle = document.getElementById("theme-toggle");
+   var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    if (storedTheme) document.documentElement.setAttribute('data-theme', storedTheme);
+  toggle.onclick = function() {
+    var currentTheme = document.documentElement.getAttribute("data-theme");
+    var targetTheme = "light";
+   if (currentTheme === "light") {
+        targetTheme = "dark";
+    }
+   document.documentElement.setAttribute('data-theme', targetTheme)
+    localStorage.setItem('theme', targetTheme);
+    };
+  </script>
 </html>
