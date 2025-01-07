@@ -49,7 +49,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
   <!-- Place favicon.ico in the root directory -->
 
   <!-- Need to toggle this when deploying -->
@@ -163,7 +163,7 @@ align-self: center;
     I am currently seeking full-time roles in software engineering, materials engineering, or wherever else may be a good fit.
     </p>
     <p>
-    Learn more about me from my <a href="./JonathanFung_Resume.pdf">résumé</a>.
+    Learn more about me from my <a href="./assets/241209_JonathanFung_Resume.pdf">résumé</a>.
     </p>
     <p>
     Email me at: jonathanfung2000 AT gmail DOT com. </br>
