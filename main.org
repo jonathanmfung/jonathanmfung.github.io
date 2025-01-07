@@ -34,8 +34,8 @@
     <div class="main-container">
       <<sidebar>>
       <<home>>
+      <<decor>>
     </div>
-    <<decor>>
   </body>
 </html>
 #+end_src
@@ -98,16 +98,10 @@
 <footer></footer>
 #+end_src
 *** decor+=
-add this back into block to include =:noweb no-export :noweb-ref decor=
-#+begin_src web
-<div class="decor">
-    <div class="bracket" style="top: 25px; left: 25px; transform: rotate(0deg);"></div>
-    <div class="bracket" style="bottom: 25px; left: 25px; transform: rotate(-90deg);"></div>
-    <div class="copyright" style="bottom: 20px; left: 75px; ">
-        © 2021 Jonathan Fung
-    </div>
-    <div class="bracket" style="top: 25px; right: 25px; transform: rotate(90deg); border-color:var(--black);"></div>
-    <div class="bracket" style="bottom: 25px; right: 25px; transform: rotate(180deg);border-color:var(--black);"></div>
+#+begin_src web :noweb no-export :noweb-ref decor
+<div class="decor-container">
+    <div class="bracket" style="border-top: 0.2rem var(--main-gray) solid; border-right: 0.2rem var(--main-gray) solid;"></div>
+    <div class="bracket" style="border-bottom: 0.2rem var(--main-gray) solid; border-right: 0.2rem var(--main-gray) solid;"></div>
 </div>
 #+end_src
 ** Mains
@@ -218,7 +212,7 @@ html, body {
 #+end_src
 ** Desktop+=
 #+begin_src css :noweb no-export :noweb-ref desktop
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 900px) {
   /* For Desktop */
 html {
     display: table;
@@ -229,6 +223,7 @@ body {
     display: table-cell;
     vertical-align: middle;
 }
+
 .main-container {
     display: flex;
     flex-direction: row;
@@ -330,6 +325,17 @@ body {
     background-color: var(--white);
     border-color: var(--primary);
     color: var(--primary);
+}
+
+.decor-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.bracket {
+    width: 50px;
+    height: 50px;
 }
 
 .blog-container {
@@ -508,15 +514,6 @@ body {
     margin: 0;
 }
 
-.bracket {
-    width: 50px;
-    height: 50px;
-    position: fixed;
-    border-top: solid var(--white) 0.2rem;
-    border-left: solid var(--white) 0.2rem;
-    z-index: 1;
-}
-
 .copyright {
     width: 15%;
     position: fixed;
@@ -564,7 +561,7 @@ body {
 #+end_src
 ** Mobile+=
 #+begin_src css :noweb no-export :noweb-ref mobile
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 899px) {
   /* For Mobile */
 .main-container {
     display: grid;

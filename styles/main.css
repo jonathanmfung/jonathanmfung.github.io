@@ -32,7 +32,7 @@ html, body {
     height: 100%;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 900px) {
   /* For Desktop */
 html {
     display: table;
@@ -43,6 +43,7 @@ body {
     display: table-cell;
     vertical-align: middle;
 }
+
 .main-container {
     display: flex;
     flex-direction: row;
@@ -144,6 +145,17 @@ body {
     background-color: var(--white);
     border-color: var(--primary);
     color: var(--primary);
+}
+
+.decor-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.bracket {
+    width: 50px;
+    height: 50px;
 }
 
 .blog-container {
@@ -322,15 +334,6 @@ body {
     margin: 0;
 }
 
-.bracket {
-    width: 50px;
-    height: 50px;
-    position: fixed;
-    border-top: solid var(--white) 0.2rem;
-    border-left: solid var(--white) 0.2rem;
-    z-index: 1;
-}
-
 .copyright {
     width: 15%;
     position: fixed;
@@ -375,7 +378,7 @@ body {
     margin-right: 1rem;
  }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 899px) {
   /* For Mobile */
 .main-container {
     display: grid;
