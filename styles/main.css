@@ -39,8 +39,8 @@ html, body {
     background: var(--bg);
 }
 
-@media only screen and (min-width: 900px) {
-  /* For Desktop */
+/* @media only screen and (min-width: 900px) { */
+
 html {
     display: table;
     margin: auto;
@@ -85,48 +85,6 @@ body {
     color: var(--white);
 }
 
-.blog-sidebar {
-    visibility: visible;
-    /* align-self: end; */
-}
-
-.sidebar-name a{
-    text-decoration: none;
-}
-
-.sidebar-routes {
-    grid-column: 2 / 2;
-    grid-row: 3 / 3;
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-.sidebar-links {
-    grid-column: 2 / 2;
-    grid-row: 4 / 4;
-    font-size: 1.2rem;
-}
-
-.sidebar-links-mobile {
-    grid-column: 2 / 2;
-    grid-row: 4 / 4;
-    font-size: 1.2rem;
-    display:none;
-}
-
-.sidebar-lists {
-    list-style: none;
-    text-align: right;
-}
-
-.sidebar-lists a.pages {
-    text-decoration: none;
-}
-
-.sidebar-lists a.pages:hover {
-    color: var(--sidebar-link-hover);
-}
-
 .sidebar-line {
     width: 0px;
     height: 90px;
@@ -161,504 +119,44 @@ body {
     color: var(--frame);
 }
 
-.blog-container {
-    max-width: 100ch;
-    /* text-indent: 2rem; */
-    margin: auto;
-}
-
-.blog-container h1 {
-    margin: 1% 5%;
-    font-weight: 600;
-    font-size: 1.728em;
-}
-
-.blog-container h2 {
-    margin: 3% 5% 2% 5%;
-    font-weight: 600;
-    font-size: 1.44em;
-}
-
-.blog-container h2.question {
-    margin: 3% 5%;
-    font-weight: 600;
-    font-style: italic;
-    text-align: center;
-    font-size: 1.2em;
-}
-
-.blog-container p {
-    font-size: 1em;
-    padding: 0 2em;
-}
-
-.content-container > ul {
-    list-style-type: none;
-    margin: -2% 2%;
-}
 .content-container p a{
     color: var(--fg);
     text-decoration-color: var(--accent);
     text-decoration-thickness: 0.2rem;
-}
-
-/* visted-hover declaration order matters */
-.content-container p a:visited {
-    /* color: var(--main-gray); */
 }
 
 .content-container p a:hover{
     text-decoration-color: var(--primary);
 }
 
-.content-divider {
-    height: 0.05rem;
-    background-color: var(--fg);
-}
-
-.featured {
-    width: 50%;
-    max-width: 350px;
-    margin: 10% 25% 0%;
-    padding: 5%;
-    font-size:  110%;
-    color: var(--fg);
-    background-color: var(--bg);
-    border: 0.2rem var(--frame) solid;
-}
-
-.featured ul {
-    list-style-type: none;
-    margin-top: 0%;
-    /* color: var(--main-gray); */
-    padding: 0;
-}
-
-.featured a {
-    color: var(--fg);
-    text-decoration-color: var(--accent);
-    text-decoration-thickness: 0.2rem;
-}
-
-.featured a:hover {
-    text-decoration-color: var(--primary);
-}
-
-/* https://stackoverflow.com/questions/22763127/aligning-text-on-a-specific-character/22763427 */
-.featured li {
-  display: flex;
-}
-
-.featured li span {
-  flex: 1;
-}
-
-.featured li span:first-of-type {
-  text-align: right;
-  padding-right: 5px;
-}
-
-.featured li span:last-of-type {
-  padding-left: 5px;
-  flex-grow: 2;
-}
-
-.card-container {
-    margin-top: 3rem;
-    display: grid;
-    /* https://css-tricks.com/look-ma-no-media-queries-responsive-layouts-using-css-grid/ */
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-    row-gap: 3.5rem;
-    grid-auto-flow: row;
-
-    justify-items: center;
-    justify-content: space-evenly;
-}
-
-.card {
-    border: 0.2rem var(--frame) solid;
-    width: 333px;
-    height: 250px;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "title title"
-        "scales score";
-}
-
-.card h1 {
-    font-weight: 600;
-    grid-area: title;
-    justify-self: start;
-    margin: 1.5rem;
-    font-size: 1.8rem;
-}
-
-.card h1 a{
-    text-decoration: none;
-    color: var(--fg);
-}
-
-.card h1 a:hover {
-    color: var(--frame);
-}
-
-.card ul {
-    grid-area: scales;
-    list-style: none;
-    padding: 0;
-    margin-left: 1.5rem;
-    align-self: center;
-    color: var(--frame);
-    font-size: 1.1em;
-}
-
-.card .score {
-    grid-area: score;
-    justify-self: end;
-    margin-right: 1.5rem;
-    align-self: center;
-    text-align: right;
-    color: var(--main-gray);
-}
-
-.card .score p {
-    font-style: italic;
-    margin: 0;
-    margin-bottom: 0.4rem;
-    font-size: 1.1em;
-}
-
-.card .score h2 {
-    font-style: italic;
-    font-weight: 600;
-    font-size: 2rem;
-    margin: 0;
-}
-
-.copyright {
-    width: 15%;
-    position: fixed;
-    margin-left: 1%;
-    font-weight: 600;
-    color: var(--white);
-    z-index: 1;
-}
-
-.bookshelf {
-    display: flex;
-    flex-direction: column;
-    padding-top: 5vh;
-    align-items: center;
-    min-width: 600px;
-}
-
-.book {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    width: 80%;
-    border: 0.3rem var(--main-gray) solid;
-    justify-content: space-around;
-    margin: 0.5rem;
-}
-
-.book-percentage {
-    font-size: 1.5rem;
-    margin-left: 1rem;
-}
-
-.book-title {
-    font-size: 2rem;
-    flex-grow: 2;
-    padding: 0 2vw;
-    font-weight: 600;
-}
-
-.book-author {
-    font-size: 1.5rem;
-    margin-right: 1rem;
- }
-}
 @media only screen and (max-width: 899px) {
-  /* For Mobile */
+
+/* For Mobile */
+html {
+    height: auto;
+}
 .main-container {
-    display: grid;
-    width: 100%;
-    grid-template-rows: 12% 88%;
+    flex-direction: column;
 }
 
 .sidebar-container {
-    display: grid;
-    color: var(--white);
-    background-color: var(--primary);
-    height: 100%;
-    grid-template-rows: 13% 73% 15%;
-    grid-template-columns: 10% 20% 25% 15% 20% 10%;
-    min-height: 100px;
-}
-
-.sidebar-container a{
-    color: var(--white);
-}
-
-.sidebar-container a:hover {
-    color: var(--sidebar-link-hover);
-}
-
-.sidebar-name {
-    grid-column: 2 / 2;
-    grid-row: 2 / 2;
-    justify-self: end;
-    max-width: 200px;
-    text-align: left;
-    font-size: 1rem;
-    font-weight: 700;
-    align-self: center;
-}
-
-.sidebar-name a {
-    text-decoration: none;
-}
-
-.sidebar-routes {
-    grid-column: 3 / 3;
-    grid-row: 2 / 2;
-    font-size: 0.8rem;
-    align-self: center;
-    text-align: center;
-}
-
-.sidebar-links {
-    grid-column: 4 / 4;
-    grid-row: 2 / 2;
-    font-size: 0.8rem;
-    align-self: center;
-    display:none;
-}
-
-.sidebar-links-mobile {
-    grid-column: 5 / 5;
-    grid-row: 2 / 2;
-    font-size: 1.0rem;
-    width: 2.5rem;
-    justify-self: center;
-    align-self: center;
-    text-align: center;
-}
-
-.sidebar-lists {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar-links-mobile li {
-    display: inline-block;
-    margin: 0% 4%;
-
-}
-
-.sidebar-lists a {
-    color: var(--white);
-}
-
-.sidebar-lists a:hover {
-    color: var(--sidebar-link-hover);
+    flex-direction: column;
+    padding: 30px 0;
+    gap: 15px;
 }
 
 .sidebar-line {
-    grid-row: 3 / 3;
-    grid-column: 2 / 6;
-    background-color: var(--white);
-    height: 0.1rem;
-    align-self: center;
+    width: 300px;
+    height: 0px;
+    border: 1.5px solid var(--white);
+}
+
+.sidebar-name br {
+    display: none;
 }
 
 .content-container {
-    color: var(--black);
-    background-color: var(--white);
-    padding: 4vh 0;
+    padding-inline: 2em;
 }
 
-.content-title {
-    /*width: 20%;*/
-    font-size:  165%; /*165%;*/
-    color: var(--main-gray);
-    background-color: white;;
-    margin-left: 5%;
-    margin-bottom: 5%;
-    padding: 0.5rem 0.7rem;
-    text-align: center;
-    border: 0.2rem var(--main-gray) solid;
 }
-
-.blog-container {
-    max-width: 100ch;
-    /* text-indent: 2rem; */
-    margin: auto;
-}
-
-.blog-container h1 {
-    margin: 1% 5%;
-    font-weight: 600;
-    font-size: 1.728em;
-}
-
-.blog-container h2 {
-    margin: 3% 5% 2% 5%;
-    font-weight: 600;
-    font-size: 1.44em;
-}
-
-.blog-container h2.question {
-    margin: 3% 5%;
-    font-weight: 600;
-    font-style: italic;
-    text-align: center;
-    font-size: 1.2em;
-}
-
-.blog-container p {
-    font-size: 1em;
-    padding: 0 2em;
-}
-
-.content-container > p {
-    margin: 2% 5%;
-    font-size: 0.9rem;
-}
-.content-container > ul {
-    /*margin: 2% 5%;*/
-    font-size: 0.9rem;
-    list-style-type: none;
-    margin: -2% 2%;
-}
-
-.content-container p a{
-    color: var(--accent);
-}
-.content-container p a:visited {
-    color: var(--accent);
-}
-.content-divider {
-    height: 0.05rem;
-    background-color: var(--black);
-}
-
-.featured {
-    display: none;
-}
-
-.card-container {
-    margin: 3rem 0;
-    display: grid;
-    /* https://css-tricks.com/look-ma-no-media-queries-responsive-layouts-using-css-grid/ */
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-    row-gap: 3.5rem;
-    grid-auto-flow: row;
-
-    justify-items: center;
-    justify-content: space-evenly;
-}
-
-.card {
-    border: 0.2rem var(--main-gray) solid;
-    width: 333px;
-    height: 250px;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "title title"
-        "scales score";
-}
-
-.card h1 {
-    font-weight: 600;
-    grid-area: title;
-    justify-self: start;
-    margin: 1.5rem;
-    font-size: 1.8rem;
-}
-
-.card h1 a{
-    text-decoration: none;
-    color: var(--black);
-}
-
-.card h1 a:hover {
-    color: var(--main-gray);
-}
-
-.card ul {
-    grid-area: scales;
-    list-style: none;
-    padding: 0;
-    margin-left: 1.5rem;
-    align-self: center;
-    color: var(--main-gray);
-    font-size: 1.1em;
-}
-
-.card .score {
-    grid-area: score;
-    justify-self: end;
-    margin-right: 1.5rem;
-    align-self: center;
-    text-align: right;
-    color: var(--main-gray);
-}
-
-.card .score p {
-    font-style: italic;
-    margin: 0;
-    margin-bottom: 0.4rem;
-    font-size: 1.1em;
-}
-
-.card .score h2 {
-    font-style: italic;
-    font-weight: 600;
-    font-size: 2rem;
-    margin: 0;
-}
-
-.bracket {
-    display: none;
-}
-
-.bookshelf {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.book {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    width: 90%;
-    border: 0.3rem var(--main-gray) solid;
-    justify-content: space-around;
-    margin: 0.5rem;
-}
-
-.book-percentage {
-    font-size: 0.75rem;
-    margin-left: 1rem;
-}
-
-.book-title {
-    font-size: 1rem;
-    flex-grow: 2;
-    padding: 0 4vw;
-    font-weight: 600;
-}
-
-.book-author {
-    font-size: 0.75rem;
-    margin-right: 1rem;
- }
-        }
