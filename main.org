@@ -79,20 +79,7 @@ toggle.onclick = function() {
         Hello!
     </button>
     <p>
-    I enjoy learning about almost anything, from Type Theory to Semiconductors to Typesetting to Sociology.
-    </p>
-    <p>
-    I have a B.S. in Materials Science Engineering from UC Irvine. I have worked as a Data Scientist at <a href="https://www.harmonyanalytics.org/">Harmony Analytics</a>, where I learned about the world of corporate reporting.
-    </p>
-    <p>
-    I am currently seeking full-time roles in software engineering, materials engineering, or wherever else may be a good fit.
-    </p>
-    <p>
-    Learn more about me from my <a href="./assets/241209_JonathanFung_Resume.pdf">résumé</a>.
-    </p>
-    <p>
-    Email me at: jonathanfung2000 AT gmail DOT com. </br>
-    Also feel free to check out my <a href="https://www.linkedin.com/in/jonathanmfung">LinkedIn</a> and <a href="https://github.com/jonathanmfung">GitHub</a>.
+    Checkout my new <a href="https://jonathanmfung.com">website</a>!
     </p>
 </div>
 #+end_src
@@ -213,6 +200,7 @@ body {
     color: var(--fg);
     background-color: var(--bg);
     max-width: 500px;
+    min-height: 200px;
     padding: 2em 0;
 }
 
